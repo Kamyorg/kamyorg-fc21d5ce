@@ -10,10 +10,10 @@ import projSlim from "@/assets/project-slimora.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Kamyorg — Shopify Growth Partner & Developer | Mohammed Kamaldeen" },
-      { name: "description", content: "Premium Shopify development, CRO, SEO and digital marketing. 20+ stores delivered worldwide. Strategic Partner at TheHeroes Agency." },
-      { property: "og:title", content: "Kamyorg — Shopify Growth Partner" },
-      { property: "og:description", content: "I build high-converting Shopify stores that turn visitors into customers." },
+      { title: "Mohammed Kamaldeen (Kamyorg) — Shopify Developer & CRO Specialist" },
+      { name: "description", content: "I'm Mohammed Kamaldeen (Kamyorg). I build, redesign and optimize Shopify stores that look professional, load fast and turn visitors into customers." },
+      { property: "og:title", content: "Kamyorg — Shopify Developer & CRO Specialist" },
+      { property: "og:description", content: "Shopify stores built to look professional and help businesses grow." },
     ],
   }),
   component: Index,
@@ -110,7 +110,6 @@ function Hero() {
 
   return (
     <section ref={ref} id="top" className="relative min-h-screen pt-32 pb-20 overflow-hidden">
-      {/* gold orb */}
       <div className="absolute top-0 right-0 h-[600px] w-[600px] rounded-full opacity-20 blur-[120px] bg-gold pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 h-[400px] w-[400px] rounded-full opacity-10 blur-[120px] bg-gold pointer-events-none" />
 
@@ -121,21 +120,21 @@ function Hero() {
             className="inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-xs text-muted-foreground mb-8"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Available for select Q1 partnerships
+            Currently taking on new Shopify projects
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display text-[clamp(2.5rem,6.5vw,5.5rem)] font-medium leading-[0.98] tracking-[-0.03em]"
+            className="font-display text-[clamp(2.5rem,6.5vw,5.5rem)] font-medium leading-[1.02] tracking-[-0.03em]"
           >
-            Shopify stores built to <em className="gold-text not-italic font-normal italic">sell, scale</em> & dominate.
+            I build Shopify stores that look <em className="gold-text not-italic font-normal italic">professional</em> and help businesses grow.
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.25 }}
             className="mt-8 max-w-xl text-lg text-muted-foreground leading-relaxed"
           >
-            I'm <span className="text-foreground">Mohammed Kamaldeen (Kamyorg)</span> — a Shopify developer, CRO specialist & e-commerce growth partner helping ambitious DTC brands launch and scale profitable stores worldwide.
+            I'm <span className="text-foreground">Mohammed Kamaldeen (Kamyorg)</span>. I help business owners build, redesign, optimize and manage Shopify stores that are fast, easy to use, and built to convert visitors into customers.
           </motion.p>
 
           <motion.div
@@ -147,10 +146,10 @@ function Hero() {
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a href="#work" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3.5 font-medium hover:border-gold/40 transition-all">
-              View portfolio
+              See recent work
             </a>
             <a href="https://wa.me/447455903789" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-medium text-muted-foreground hover:text-gold transition-colors">
-              Book a free consultation
+              Message on WhatsApp
             </a>
           </motion.div>
 
@@ -159,10 +158,10 @@ function Hero() {
             className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl"
           >
             {[
-              { v: 20, s: "+", l: "Stores Delivered" },
-              { v: 2, s: "+", l: "Years Experience" },
-              { v: 6, s: "", l: "Countries Served" },
-              { v: 100, s: "%", l: "Client-Focused" },
+              { v: 20, s: "+", l: "Stores Built & Redesigned" },
+              { v: 2, s: "+", l: "Years On Shopify" },
+              { v: 6, s: "", l: "Countries Worked With" },
+              { v: 24, s: "h", l: "Reply Time" },
             ].map((stat, i) => (
               <div key={i} className="border-l border-border pl-4">
                 <div className="font-display text-3xl font-medium gold-text">
@@ -180,14 +179,13 @@ function Hero() {
             className="relative aspect-[4/5] rounded-2xl overflow-hidden glass"
             style={{ boxShadow: "var(--shadow-elevated)" }}
           >
-            <img src={heroPortrait} alt="Mohammed Kamaldeen — Kamyorg, Shopify Growth Partner" width={1024} height={1280} className="h-full w-full object-cover" />
+            <img src={heroPortrait} alt="Mohammed Kamaldeen — Kamyorg, Shopify developer" width={1024} height={1280} className="h-full w-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-            {/* floating badges */}
             <motion.div
               animate={{ y: [0, -8, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-6 left-6 glass rounded-full px-3 py-1.5 text-xs flex items-center gap-2"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Shopify Plus Ready
+              <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Shopify Developer
             </motion.div>
             <motion.div
               animate={{ y: [0, 8, 0] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
@@ -198,19 +196,17 @@ function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* partner card */}
           <motion.div
             initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.8 }}
             className="absolute -bottom-6 -left-6 glass rounded-xl p-4 max-w-[220px] hidden sm:block"
           >
-            <div className="text-[10px] text-gold uppercase tracking-wider">Strategic Partner</div>
+            <div className="text-[10px] text-gold uppercase tracking-wider">Working With</div>
             <div className="text-sm font-medium mt-1">TheHeroes Agency</div>
-            <div className="text-xs text-muted-foreground mt-1">Verified collaboration</div>
+            <div className="text-xs text-muted-foreground mt-1">Ongoing collaboration</div>
           </motion.div>
         </motion.div>
       </motion.div>
 
-      {/* marquee */}
       <div className="relative mt-24 border-y border-border py-5 overflow-hidden">
         <motion.div
           animate={{ x: ["0%", "-50%"] }}
@@ -219,7 +215,7 @@ function Hero() {
         >
           {Array.from({ length: 2 }).map((_, i) => (
             <div key={i} className="flex gap-16">
-              {["Shopify Plus", "Liquid", "CRO", "SEO", "Klaviyo", "Meta Ads", "Google Ads", "Theme Dev", "Migrations", "Analytics"].map(t => (
+              {["Shopify", "Liquid", "Theme Dev", "CRO", "SEO", "Klaviyo", "Wix", "Squarespace", "Meta Ads", "Google Ads"].map(t => (
                 <span key={t} className="flex items-center gap-16">
                   {t}
                   <span className="text-gold">✦</span>
@@ -252,7 +248,7 @@ function About() {
             initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
             className="relative aspect-[3/4] rounded-2xl overflow-hidden glass"
           >
-            <img src={heroPortrait} alt="Kamyorg portrait" loading="lazy" width={1024} height={1280} className="h-full w-full object-cover scale-110" />
+            <img src={heroPortrait} alt="Mohammed Kamaldeen (Kamyorg)" loading="lazy" width={1024} height={1280} className="h-full w-full object-cover scale-110" />
             <div className="absolute inset-0 bg-gradient-to-tr from-background/80 via-transparent to-transparent" />
           </motion.div>
         </div>
@@ -262,16 +258,17 @@ function About() {
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
             className="font-display text-5xl md:text-6xl font-medium tracking-[-0.02em] leading-[1.05]"
           >
-            Meet <em className="gold-text not-italic italic">Kamyorg</em>.
+            Hi, I'm <em className="gold-text not-italic italic">Mohammed Kamaldeen</em>.
           </motion.h2>
           <div className="mt-8 space-y-5 text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            <p>My name is <span className="text-foreground">Mohammed Kamaldeen</span>, professionally known as Kamyorg. I help brands launch, optimize and scale high-converting Shopify stores.</p>
-            <p>Over the past 2+ years I've worked with businesses across the <span className="text-foreground">UK, US, France, Spain, Brazil and Colombia</span> — delivering Shopify development, conversion optimization, SEO, store redesigns, technical fixes and growth-focused digital solutions.</p>
-            <p>As a <span className="text-gold">Strategic Partner of TheHeroes Agency</span>, I combine technical expertise, design thinking and marketing strategy to create eCommerce experiences that drive measurable business growth.</p>
+            <p>Also known as Kamyorg. I work with business owners who want a professional online store without the stress of figuring everything out themselves.</p>
+            <p>Over the past 2+ years, I've helped brands redesign Shopify stores, improve conversions, fix technical issues, optimize SEO and create better shopping experiences for their customers.</p>
+            <p>My focus is simple: <span className="text-foreground">create stores that look professional, work properly, and support long-term business growth.</span></p>
+            <p>I've worked with brands across the UK, US, France, Spain, Brazil and Colombia, and I also collaborate with <span className="text-gold">TheHeroes Agency</span> on bigger client projects.</p>
           </div>
 
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-xl">
-            {["Performance-driven", "Conversion-focused", "Transparent comms", "Agency execution", "Long-term partnerships", "Creative problem solving"].map(item => (
+            {["Clear communication", "Honest timelines", "Clean code", "Conversion-minded", "Long-term support", "Fair pricing"].map(item => (
               <div key={item} className="text-sm text-muted-foreground flex items-start gap-2">
                 <span className="text-gold mt-1">✦</span> {item}
               </div>
@@ -285,18 +282,22 @@ function About() {
 
 /* ---------- Services ---------- */
 const SERVICES = [
-  { t: "Shopify Store Design", d: "Stunning experiences engineered to maximize conversion and engagement.", n: "01" },
-  { t: "Shopify Development", d: "Custom functionality, advanced features and performance-focused builds.", n: "02" },
-  { t: "Theme Customization", d: "Tailored Shopify themes aligned with your brand identity and goals.", n: "03" },
-  { t: "Platform Migration", d: "Seamless migrations from Wix, Squarespace, WooCommerce and more.", n: "04" },
-  { t: "Conversion Rate Optimization", d: "Data-driven improvements that reduce friction and grow revenue.", n: "05" },
-  { t: "Shopify SEO", d: "Technical SEO, on-page optimization and organic visibility growth.", n: "06" },
-  { t: "Store Management", d: "Ongoing maintenance, updates and continuous optimization.", n: "07" },
-  { t: "Email Marketing", d: "Automated customer journeys & revenue-generating Klaviyo campaigns.", n: "08" },
-  { t: "Paid Advertising", d: "Meta Ads and Google Ads strategy, creative and campaign management.", n: "09" },
-  { t: "Graphic Design", d: "Creative assets that elevate brand perception across every touchpoint.", n: "10" },
-  { t: "Content & Creative", d: "Product videos, lifestyle creatives and content systems built to scale.", n: "11" },
-  { t: "Technical Fixes", d: "Speed, bugs, checkout issues, tracking setup and backend troubleshooting.", n: "12" },
+  { t: "Shopify Store Design", d: "Clean, modern store designs built around your brand and your customers." },
+  { t: "Shopify Development", d: "Custom sections, app integrations and functionality built properly in Liquid." },
+  { t: "Theme Customization", d: "Tailoring premium or free themes so your store actually looks like yours." },
+  { t: "Store Redesign", d: "Refreshing existing stores without losing your products, content or SEO." },
+  { t: "Shopify SEO", d: "On-page SEO, structure, speed and the technical setup search engines need." },
+  { t: "Conversion Optimization", d: "Reviewing your store and fixing the things that lose you sales." },
+  { t: "Store Management", d: "Ongoing updates, product uploads, fixes and day-to-day store admin." },
+  { t: "Technical Fixes", d: "Broken layouts, checkout issues, tracking problems, theme bugs — sorted." },
+  { t: "Email Marketing", d: "Klaviyo flows and campaigns: welcome, abandoned cart, post-purchase." },
+  { t: "Social Media Management", d: "Planning and posting content that fits your brand on Instagram & TikTok." },
+  { t: "Graphic Design", d: "Banners, product graphics, social posts and simple brand assets." },
+  { t: "AI Video Creation", d: "Short product and ad videos generated with AI tools for social and ads." },
+  { t: "Ads Management", d: "Setting up and managing Meta and Google ad campaigns end to end." },
+  { t: "Content Creation", d: "Product copy, page content and creatives written to match your brand." },
+  { t: "Wix Development", d: "Building and editing Wix websites for businesses that prefer the platform." },
+  { t: "Squarespace Development", d: "Designing and customizing Squarespace sites for service and product brands." },
 ];
 
 function Services() {
@@ -307,10 +308,10 @@ function Services() {
           <div>
             <SectionLabel>What I do</SectionLabel>
             <h2 className="font-display text-5xl md:text-6xl font-medium tracking-[-0.02em] leading-[1.05] max-w-3xl">
-              Everything your Shopify brand needs — <em className="gold-text not-italic italic">under one roof.</em>
+              Services I offer for <em className="gold-text not-italic italic">Shopify & online stores.</em>
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-sm">From first pixel to scaling past seven figures. End-to-end e-commerce execution.</p>
+          <p className="text-muted-foreground max-w-sm">If you don't see what you need listed here, just message me. There's a good chance I can help or point you in the right direction.</p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden">
@@ -324,7 +325,7 @@ function Services() {
               className="group relative bg-background p-8 hover:bg-secondary transition-colors duration-500 cursor-default"
             >
               <div className="flex items-start justify-between mb-6">
-                <span className="text-xs text-muted-foreground font-mono">{s.n}</span>
+                <span className="text-xs text-muted-foreground font-mono">{String(i + 1).padStart(2, "0")}</span>
                 <div className="h-8 w-8 rounded-full border border-border flex items-center justify-center text-muted-foreground group-hover:bg-gold group-hover:text-background group-hover:border-gold transition-all">
                   →
                 </div>
@@ -339,97 +340,12 @@ function Services() {
   );
 }
 
-/* ---------- Expertise (skill bars) ---------- */
-const SKILLS = [
-  { n: "Shopify & Liquid", v: 98 },
-  { n: "HTML / CSS / JavaScript", v: 95 },
-  { n: "Conversion Rate Optimization", v: 92 },
-  { n: "SEO (Technical & On-page)", v: 90 },
-  { n: "Email Marketing (Klaviyo)", v: 88 },
-  { n: "Meta & Google Ads", v: 85 },
-  { n: "Graphic & Brand Design", v: 87 },
-  { n: "Automation & Content Systems", v: 90 },
-];
-
-function Expertise() {
-  return (
-    <section className="relative py-32 px-6">
-      <div className="mx-auto max-w-7xl grid lg:grid-cols-12 gap-16">
-        <div className="lg:col-span-5 lg:sticky lg:top-32 self-start">
-          <SectionLabel>Expertise</SectionLabel>
-          <h2 className="font-display text-5xl md:text-6xl font-medium tracking-[-0.02em] leading-[1.05]">
-            A full stack of <em className="gold-text not-italic italic">e-commerce</em> capabilities.
-          </h2>
-          <p className="mt-6 text-muted-foreground text-lg max-w-md">Years of execution distilled into the disciplines that move the needle.</p>
-        </div>
-        <div className="lg:col-span-7 space-y-7">
-          {SKILLS.map((s, i) => (
-            <SkillBar key={s.n} skill={s} index={i} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function SkillBar({ skill, index }: { skill: { n: string; v: number }; index: number }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-50px" });
-  return (
-    <div ref={ref}>
-      <div className="flex justify-between items-baseline mb-2">
-        <span className="font-display text-lg">{skill.n}</span>
-        <span className="text-xs text-gold font-mono">{skill.v}%</span>
-      </div>
-      <div className="h-px bg-border relative overflow-hidden">
-        <motion.div
-          initial={{ width: 0 }}
-          animate={inView ? { width: `${skill.v}%` } : {}}
-          transition={{ duration: 1.4, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute top-0 left-0 h-full bg-gradient-to-r from-gold/40 via-gold to-gold-soft shadow-[0_0_20px_var(--color-gold)]"
-        />
-      </div>
-    </div>
-  );
-}
-
-/* ---------- Partnership ---------- */
-function Partnership() {
-  return (
-    <section className="relative py-32 px-6">
-      <div className="mx-auto max-w-5xl">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
-          className="relative glass rounded-3xl p-12 md:p-20 text-center overflow-hidden"
-        >
-          <div className="absolute -top-20 left-1/2 -translate-x-1/2 h-60 w-60 rounded-full bg-gold/20 blur-[100px]" />
-          <div className="relative">
-            <SectionLabel>Strategic Partnership</SectionLabel>
-            <div className="flex items-center justify-center gap-8 md:gap-16 mb-8">
-              <div className="font-display text-3xl md:text-4xl font-medium">Kamyorg</div>
-              <div className="h-px w-12 md:w-24 bg-gold" />
-              <div className="font-display text-3xl md:text-4xl font-medium gold-text">TheHeroes</div>
-            </div>
-            <h3 className="font-display text-3xl md:text-5xl font-medium tracking-[-0.02em] leading-tight max-w-3xl mx-auto">
-              Building conversion-focused Shopify solutions for ambitious DTC brands worldwide.
-            </h3>
-            <div className="mt-10 inline-flex items-center gap-2 glass rounded-full px-5 py-2.5 text-sm">
-              <svg className="h-4 w-4 text-gold" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-              Verified Strategic Partner
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
-
 /* ---------- Work ---------- */
 const PROJECTS = [
-  { t: "RebelShape.fr", c: "Athletic Apparel · France", img: projRebel, tags: ["Shrine Pro", "Redesign", "Technical SEO", "CRO"], desc: "Complete redesign and conversion-focused rebuild using Shrine Pro. Resolved technical errors and rebuilt the store structure for a frictionless purchase journey." },
-  { t: "Trade-collector.com", c: "Collectibles · International", img: projTrade, tags: ["Optimization", "Growth"], desc: "Store optimization and growth-focused improvements across UX, performance and merchandising." },
-  { t: "Bon-Ceero", c: "Beauty & Cosmetics", img: projBon, tags: ["Development", "Customization"], desc: "End-to-end Shopify build with custom theme work tailored to the brand's premium positioning." },
-  { t: "Slimora-Sculpt", c: "Wellness · DTC", img: projSlim, tags: ["CRO", "Implementation"], desc: "Conversion-focused Shopify implementation with a frictionless checkout and lifecycle email setup." },
+  { t: "RebelShape.fr", c: "Activewear · France", img: projRebel, tags: ["Shrine Pro", "Redesign", "Technical Fixes"], desc: "Full redesign of the store on the Shrine Pro theme. Cleaned up the structure, fixed existing technical errors and rebuilt the product and collection pages to feel more like a real brand." },
+  { t: "Trade-collector.com", c: "Collectibles · International", img: projTrade, tags: ["Store Optimization", "UX"], desc: "Ongoing improvements to an existing store — adjusting the layout, fixing usability issues and making the buying flow easier to follow." },
+  { t: "Bon-Ceero", c: "Beauty & Cosmetics", img: projBon, tags: ["Shopify Build", "Theme Customization"], desc: "Built the store from scratch on Shopify with a customized theme set up around the brand's look, product range and audience." },
+  { t: "Slimora-Sculpt", c: "Wellness · DTC", img: projSlim, tags: ["Setup", "Checkout"], desc: "Shopify setup with a focus on a clean product page, a simple checkout and a basic email flow for new customers." },
 ];
 
 function Work() {
@@ -440,10 +356,10 @@ function Work() {
           <div>
             <SectionLabel>Selected Work</SectionLabel>
             <h2 className="font-display text-5xl md:text-6xl font-medium tracking-[-0.02em] leading-[1.05]">
-              Stores that <em className="gold-text not-italic italic">convert.</em>
+              A few <em className="gold-text not-italic italic">recent projects.</em>
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-sm">A snapshot of recent collaborations with DTC brands across the UK, EU and the Americas.</p>
+          <p className="text-muted-foreground max-w-sm">Most of my work is under NDA or done as part of agency projects. Here are a few I can share publicly.</p>
         </div>
 
         <div className="space-y-32">
@@ -492,10 +408,10 @@ function Work() {
 
 /* ---------- Testimonials ---------- */
 const REVIEWS = [
-  { n: "Léa M.", r: "RebelShape · France", q: "Kamyorg rebuilt our entire Shopify store. The new design loads beautifully and our conversion rate jumped within weeks. Genuinely the most thoughtful developer we've worked with." },
-  { n: "Daniel R.", r: "DTC Founder · United States", q: "Technical, creative and reliable. He fixed checkout issues two other devs couldn't and then optimized the funnel. Numbers speak for themselves." },
-  { n: "Ana C.", r: "Wellness Brand · Brazil", q: "The redesign elevated our entire brand. Kamyorg pairs an agency-level eye for design with deep Shopify engineering. Highly recommended." },
-  { n: "James T.", r: "E-commerce Lead · UK", q: "Communication was sharp, deadlines respected, output exceptional. Our store finally looks and performs like the premium brand we are." },
+  { n: "Léa", r: "RebelShape · France", q: "Kamyorg redesigned our Shopify store and fixed issues we had been struggling with for months. Communication was easy and the result speaks for itself." },
+  { n: "Daniel", r: "Store Owner · United States", q: "He understood what I wanted from the first call. Delivered on time, kept me updated through the whole project and was happy to make small changes after launch." },
+  { n: "Ana", r: "Wellness Brand · Brazil", q: "Honestly one of the easiest people I've worked with. He explained things in plain language and the store actually looks like a real brand now." },
+  { n: "James", r: "Founder · UK", q: "Reliable, technical and patient. He answered every question and didn't disappear after the project was finished." },
 ];
 
 function Testimonials() {
@@ -507,9 +423,9 @@ function Testimonials() {
   return (
     <section className="relative py-32 px-6">
       <div className="mx-auto max-w-5xl text-center">
-        <SectionLabel>Testimonials</SectionLabel>
+        <SectionLabel>What clients say</SectionLabel>
         <h2 className="font-display text-5xl md:text-6xl font-medium tracking-[-0.02em] leading-[1.05] mb-16">
-          Trusted by store owners <em className="gold-text not-italic italic">worldwide.</em>
+          Kind words from <em className="gold-text not-italic italic">store owners.</em>
         </h2>
 
         <div className="relative glass rounded-3xl p-10 md:p-16 min-h-[320px] flex flex-col items-center justify-center overflow-hidden">
@@ -548,11 +464,11 @@ function Testimonials() {
 
 /* ---------- Process ---------- */
 const PROCESS = [
-  { n: "01", t: "Discovery", d: "Understanding your goals, audience and business model." },
-  { n: "02", t: "Strategy", d: "A tailored growth roadmap with priorities and KPIs." },
-  { n: "03", t: "Design & Build", d: "Premium UI design and conversion-engineered Shopify build." },
-  { n: "04", t: "Optimize", d: "Data-driven CRO, SEO and performance improvements." },
-  { n: "05", t: "Scale", d: "Long-term partnership to compound growth quarter over quarter." },
+  { n: "01", t: "We talk", d: "A quick call or chat so I understand your business, your goals and what's not working right now." },
+  { n: "02", t: "Plan & quote", d: "I send a clear plan with what's included, how long it'll take and a fixed price." },
+  { n: "03", t: "Design & build", d: "I design and build the store, sharing progress as I go so there are no surprises." },
+  { n: "04", t: "Review & launch", d: "We review everything together, make any final tweaks, and launch when you're happy." },
+  { n: "05", t: "Support", d: "I stay available after launch for fixes, updates and any ongoing changes you need." },
 ];
 
 function Process() {
@@ -560,9 +476,9 @@ function Process() {
     <section id="process" className="relative py-32 px-6">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-20">
-          <SectionLabel>Process</SectionLabel>
+          <SectionLabel>How we'll work together</SectionLabel>
           <h2 className="font-display text-5xl md:text-6xl font-medium tracking-[-0.02em] leading-[1.05]">
-            From idea to <em className="gold-text not-italic italic">scale</em>.
+            Simple, honest <em className="gold-text not-italic italic">process</em>.
           </h2>
         </div>
         <div className="grid md:grid-cols-5 gap-6">
@@ -586,39 +502,14 @@ function Process() {
   );
 }
 
-/* ---------- Why ---------- */
-function Why() {
-  const items = ["20+ Shopify Projects", "International Experience", "Performance Driven", "Conversion Focused", "Transparent Communication", "Agency-Level Execution"];
-  return (
-    <section className="relative py-32 px-6 border-y border-border">
-      <div className="mx-auto max-w-7xl">
-        <SectionLabel>Why clients choose me</SectionLabel>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8 mt-10">
-          {items.map((t, i) => (
-            <motion.div
-              key={t}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.06 }}
-              className="font-display text-3xl md:text-4xl font-medium tracking-[-0.02em] flex items-center gap-4"
-            >
-              <span className="text-gold text-xl">✦</span> {t}
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ---------- FAQ ---------- */
 const FAQS = [
-  { q: "What Shopify services do you offer?", a: "End-to-end: store design, development, theme customization, migrations, CRO, SEO, technical fixes, store management, plus integrated marketing (email, paid, content)." },
-  { q: "Can you redesign an existing store?", a: "Absolutely. Most of my work is high-impact redesigns of established stores — preserving SEO and revenue while modernizing the experience." },
-  { q: "Do you provide SEO services?", a: "Yes. Technical SEO, on-page optimization, schema implementation and ongoing visibility improvements tailored to Shopify." },
-  { q: "Do you work with international clients?", a: "I work remotely with brands across the UK, US, France, Spain, Brazil, Colombia and beyond." },
-  { q: "Can you manage my store after launch?", a: "Yes — ongoing retainers are available for maintenance, optimization, marketing and growth." },
+  { q: "What do you actually do?", a: "I build, redesign and manage Shopify stores. I also handle related things like SEO, conversion fixes, email marketing, ads and basic graphic design." },
+  { q: "Can you redesign my existing store?", a: "Yes. That's a big part of my work. I can refresh your store without losing your products, content, customer data or SEO." },
+  { q: "How long does a Shopify project take?", a: "Most stores take between 2 and 4 weeks depending on the size and what's included. I'll give you a clear timeline before we start." },
+  { q: "Do you work with people outside the UK?", a: "Yes. I work remotely with clients in the US, France, Spain, Brazil, Colombia and other countries. Most communication happens by email or WhatsApp." },
+  { q: "Do you also help with Wix or Squarespace?", a: "Yes, but Shopify is my main focus. If your project is better suited to Wix or Squarespace, I can build that for you instead." },
+  { q: "Can you help after the store is launched?", a: "Yes. I offer ongoing support for updates, fixes, product uploads, marketing and general store management." },
 ];
 
 function FAQ() {
@@ -628,7 +519,7 @@ function FAQ() {
       <div className="mx-auto max-w-4xl">
         <SectionLabel>FAQ</SectionLabel>
         <h2 className="font-display text-5xl md:text-6xl font-medium tracking-[-0.02em] leading-[1.05] mb-12">
-          Common <em className="gold-text not-italic italic">questions</em>.
+          Things people <em className="gold-text not-italic italic">usually ask</em>.
         </h2>
         <div className="space-y-3">
           {FAQS.map((f, i) => (
@@ -675,12 +566,12 @@ function Contact() {
     <section id="contact" className="relative py-32 px-6">
       <div className="mx-auto max-w-7xl grid lg:grid-cols-12 gap-16">
         <div className="lg:col-span-5">
-          <SectionLabel>Contact</SectionLabel>
+          <SectionLabel>Get in touch</SectionLabel>
           <h2 className="font-display text-5xl md:text-6xl font-medium tracking-[-0.02em] leading-[1.02]">
-            Let's build something <em className="gold-text not-italic italic">exceptional.</em>
+            Tell me about your <em className="gold-text not-italic italic">store</em>.
           </h2>
           <p className="mt-6 text-muted-foreground text-lg max-w-md">
-            Tell me about your brand and what you want to build. I'll get back within 24 hours.
+            Share a few details about your business and what you'd like help with. I usually reply within 24 hours.
           </p>
 
           <div className="mt-12 space-y-5">
@@ -708,7 +599,7 @@ function Contact() {
               </div>
               <div>
                 <div className="text-xs text-muted-foreground uppercase tracking-wider">Based in</div>
-                <div className="font-medium">London, United Kingdom · Available worldwide</div>
+                <div className="font-medium">London, United Kingdom · Working worldwide</div>
               </div>
             </div>
           </div>
@@ -720,15 +611,15 @@ function Contact() {
             <Field name="email" type="email" label="Email" required />
           </div>
           <div className="grid sm:grid-cols-2 gap-5">
-            <Field name="type" label="Project type" placeholder="e.g. Shopify redesign" />
-            <Field name="budget" label="Budget" placeholder="e.g. £5k – £15k" />
+            <Field name="type" label="What do you need help with?" placeholder="e.g. New Shopify store" />
+            <Field name="budget" label="Rough budget" placeholder="e.g. £1k – £5k" />
           </div>
           <div>
-            <label className="text-xs uppercase tracking-wider text-muted-foreground">Message</label>
+            <label className="text-xs uppercase tracking-wider text-muted-foreground">Tell me a bit more</label>
             <textarea name="message" required rows={5} className="mt-2 w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-foreground resize-none transition-colors" />
           </div>
           <button type="submit" className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3.5 font-medium hover:bg-gold transition-all">
-            {sent ? "Opening email…" : "Start your project"}
+            {sent ? "Opening email…" : "Send message"}
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </button>
         </form>
@@ -759,7 +650,7 @@ function Footer() {
               Kamyorg
             </div>
             <p className="mt-4 text-muted-foreground text-sm max-w-xs leading-relaxed">
-              Mohammed Kamaldeen — Shopify Growth Partner. Strategic Partner at TheHeroes Agency.
+              Mohammed Kamaldeen — Shopify Developer, Designer & Store Growth Specialist. Working with TheHeroes Agency.
             </p>
           </div>
           <div>
@@ -775,13 +666,13 @@ function Footer() {
             <ul className="space-y-2 text-sm">
               <li><a href="mailto:kamyorg001@gmail.com" className="hover:text-gold transition-colors">kamyorg001@gmail.com</a></li>
               <li><a href="https://wa.me/447455903789" className="hover:text-gold transition-colors">+44 7455 903789</a></li>
-              <li className="text-muted-foreground">London, UK · Worldwide</li>
+              <li className="text-muted-foreground">London, UK · Working worldwide</li>
             </ul>
           </div>
         </div>
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between gap-4 text-xs text-muted-foreground">
           <div>© {new Date().getFullYear()} Mohammed Kamaldeen (Kamyorg). All rights reserved.</div>
-          <div>Designed & engineered in London.</div>
+          <div>Built and maintained from London.</div>
         </div>
       </div>
     </footer>
@@ -798,11 +689,8 @@ function Index() {
         <Hero />
         <About />
         <Services />
-        <Expertise />
-        <Partnership />
         <Work />
         <Testimonials />
-        <Why />
         <Process />
         <FAQ />
         <Contact />
