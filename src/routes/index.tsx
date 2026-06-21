@@ -295,7 +295,7 @@ const SERVICES = [
   { t: "Email Marketing", d: "Automated customer journeys & revenue-generating Klaviyo campaigns.", n: "08" },
   { t: "Paid Advertising", d: "Meta Ads and Google Ads strategy, creative and campaign management.", n: "09" },
   { t: "Graphic Design", d: "Creative assets that elevate brand perception across every touchpoint.", n: "10" },
-  { t: "AI Content Creation", d: "AI-powered videos, creatives and content systems built to scale.", n: "11" },
+  { t: "Content & Creative", d: "Product videos, lifestyle creatives and content systems built to scale.", n: "11" },
   { t: "Technical Fixes", d: "Speed, bugs, checkout issues, tracking setup and backend troubleshooting.", n: "12" },
 ];
 
@@ -348,7 +348,7 @@ const SKILLS = [
   { n: "Email Marketing (Klaviyo)", v: 88 },
   { n: "Meta & Google Ads", v: 85 },
   { n: "Graphic & Brand Design", v: 87 },
-  { n: "AI Automation & Content", v: 90 },
+  { n: "Automation & Content Systems", v: 90 },
 ];
 
 function Expertise() {
