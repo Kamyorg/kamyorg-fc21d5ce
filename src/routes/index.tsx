@@ -199,11 +199,14 @@ function Hero() {
 
           <motion.div
             initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.8 }}
-            className="absolute -bottom-6 -left-6 glass rounded-xl p-4 max-w-[220px] hidden sm:block"
+            className="absolute -bottom-6 -left-6 glass rounded-xl p-4 max-w-[260px] hidden sm:flex items-center gap-3"
           >
-            <div className="text-[10px] text-gold uppercase tracking-wider">Working With</div>
-            <div className="text-sm font-medium mt-1">TheHeroes Agency</div>
-            <div className="text-xs text-muted-foreground mt-1">Ongoing collaboration</div>
+            <img src={heroesLogo.url} alt="TheHeroes Agency logo" className="h-12 w-12 rounded-full object-cover shrink-0 ring-1 ring-white/10" />
+            <div>
+              <div className="text-[10px] text-gold uppercase tracking-wider">Working With</div>
+              <div className="text-sm font-medium mt-0.5">TheHeroes Agency</div>
+              <div className="text-xs text-muted-foreground">Ongoing collaboration</div>
+            </div>
           </motion.div>
         </motion.div>
       </motion.div>
