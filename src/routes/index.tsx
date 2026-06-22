@@ -617,7 +617,7 @@ function Contact() {
           </div>
           <div className="grid sm:grid-cols-2 gap-5">
             <Field name="type" label="What do you need help with?" placeholder="e.g. New Shopify store" />
-            <Field name="budget" label="Rough budget" placeholder="e.g. £1k – £5k" />
+            <Field name="budget" label="Rough budget" placeholder="e.g. 500 – 5,000 (any currency)" />
           </div>
           <div>
             <label className="text-xs uppercase tracking-wider text-muted-foreground">Tell me a bit more</label>
