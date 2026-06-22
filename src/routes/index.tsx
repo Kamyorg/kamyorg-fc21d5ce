@@ -650,8 +650,8 @@ function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <div className="font-display text-2xl font-semibold flex items-center gap-2">
-              <span className="inline-block h-2 w-2 rounded-full bg-gold" />
+            <div className="font-display text-2xl font-semibold flex items-center gap-2.5">
+              <img src={kamyorgLogo.url} alt="Kamyorg logo" className="h-10 w-10 rounded-md object-cover ring-1 ring-white/10" />
               Kamyorg
             </div>
             <p className="mt-4 text-muted-foreground text-sm max-w-xs leading-relaxed">
