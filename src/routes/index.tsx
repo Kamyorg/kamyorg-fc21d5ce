@@ -298,7 +298,7 @@ const SERVICES = [
   { t: "Email Marketing", d: "Klaviyo flows and campaigns: welcome, abandoned cart, post-purchase." },
   { t: "Social Media Management", d: "Planning and posting content that fits your brand on Instagram & TikTok." },
   { t: "Graphic Design", d: "Banners, product graphics, social posts and simple brand assets." },
-  { t: "AI Video Creation", d: "Short product and ad videos generated with AI tools for social and ads." },
+  { t: "Short-Form Video", d: "Quick product and ad videos edited for Instagram, TikTok and Meta ads." },
   { t: "Ads Management", d: "Setting up and managing Meta and Google ad campaigns end to end." },
   { t: "Content Creation", d: "Product copy, page content and creatives written to match your brand." },
   { t: "Wix Development", d: "Building and editing Wix websites for businesses that prefer the platform." },
