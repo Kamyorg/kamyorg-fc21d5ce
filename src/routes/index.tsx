@@ -63,8 +63,8 @@ function Nav() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "py-3" : "py-6"}`}>
       <div className="mx-auto max-w-7xl px-6">
         <div className={`flex items-center justify-between transition-all duration-500 ${scrolled ? "glass rounded-full px-5 py-2.5" : ""}`}>
-          <a href="#top" className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight">
-            <span className="inline-block h-2 w-2 rounded-full bg-gold shadow-[0_0_12px_var(--color-gold)]" />
+          <a href="#top" className="flex items-center gap-2.5 font-display text-xl font-semibold tracking-tight">
+            <img src={kamyorgLogo.url} alt="Kamyorg logo" className="h-9 w-9 rounded-md object-cover ring-1 ring-white/10" />
             Kamyorg
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
