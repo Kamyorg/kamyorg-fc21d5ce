@@ -7,6 +7,7 @@ import projTrade from "@/assets/project-trade.jpg";
 import projBon from "@/assets/project-bonceero.jpg";
 import projSlim from "@/assets/project-slimora.jpg";
 import heroesLogo from "@/assets/heroes-agency-logo.png.asset.json";
+import kamyorgLogo from "@/assets/kamyorg-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
