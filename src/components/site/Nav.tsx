@@ -8,71 +8,109 @@ export function Nav() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "py-3" : "py-5"}`}>
-      <div className="mx-auto max-w-7xl px-5">
-        <div className={`flex items-center justify-between transition-all duration-500 ${scrolled || open ? "glass rounded-2xl px-4 py-2.5" : ""}`}>
-          <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-            <img src={kamyorgLogo.url} alt="Kamyorg Agency logo" className="h-9 w-9 rounded-lg object-cover ring-1 ring-border" />
-            <span className="font-display text-lg font-bold tracking-tight">
-              Kamyorg <span className="text-muted-foreground font-medium">Agency</span>
-            </span>
-          </Link>
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+        scrolled || open ? "glass" : "bg-transparent"
+      }`}
+    >
+      <div className="container-site flex h-16 items-center justify-between md:h-20">
+        <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-2.5">
+          <img
+            src={kamyorgLogo.url}
+            alt="Kamyorg Agency"
+            width={36}
+            height={36}
+            className="h-9 w-9 rounded-lg object-cover ring-1 ring-border"
+          />
+          <span className="font-display text-[0.95rem] font-extrabold tracking-tight sm:text-base">
+            Kamyorg <span className="font-medium text-muted-foreground">Agency</span>
+          </span>
+        </Link>
 
-          <nav className="hidden lg:flex items-center gap-7 text-sm text-muted-foreground">
-            {NAV_LINKS.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                activeOptions={{ exact: l.to === "/" }}
-                className="transition-colors hover:text-foreground"
-                activeProps={{ className: "text-foreground font-medium" }}
-              >
-                {l.label}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-2">
+        <nav className="hidden items-center gap-8 text-sm text-muted-foreground lg:flex">
+          {NAV_LINKS.map((l) => (
             <Link
-              to="/contact"
-              className="hidden sm:inline-flex items-center gap-2 rounded-xl bg-brand px-4 py-2 text-sm font-semibold text-background transition-colors hover:bg-brand-soft"
+              key={l.to}
+              to={l.to}
+              activeOptions={{ exact: l.to === "/" }}
+              className="transition-colors hover:text-foreground"
+              activeProps={{ className: "text-foreground" }}
             >
-              Let's Talk <span aria-hidden>→</span>
+              {l.label}
             </Link>
-            <button
-              onClick={() => setOpen((v) => !v)}
-              aria-label="Toggle menu"
-              aria-expanded={open}
-              className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl glass"
-            >
-              <span className="text-lg">{open ? "✕" : "☰"}</span>
-            </button>
-          </div>
-        </div>
+          ))}
+        </nav>
 
-        {open && (
-          <nav className="lg:hidden mt-2 glass rounded-2xl p-3 flex flex-col">
+        <div className="flex items-center gap-2">
+          <Link
+            to="/contact"
+            className="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-background transition-colors hover:bg-brand-soft md:inline-flex"
+          >
+            Let's Work Together
+          </Link>
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border-strong lg:hidden"
+          >
+            <span className="sr-only">Menu</span>
+            <span className="relative block h-3 w-4">
+              <span
+                className={`absolute left-0 block h-px w-4 bg-foreground transition-transform duration-300 ${
+                  open ? "top-1.5 rotate-45" : "top-0"
+                }`}
+              />
+              <span
+                className={`absolute left-0 block h-px w-4 bg-foreground transition-transform duration-300 ${
+                  open ? "top-1.5 -rotate-45" : "top-3"
+                }`}
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+
+      {open && (
+        <div className="border-t border-border bg-background lg:hidden">
+          <nav className="container-site flex flex-col py-4">
             {NAV_LINKS.map((l) => (
               <Link
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-4 py-3 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
                 activeOptions={{ exact: l.to === "/" }}
-                activeProps={{ className: "text-foreground font-medium" }}
+                className="border-b border-border py-4 font-display text-lg font-semibold text-muted-foreground last:border-0"
+                activeProps={{ className: "text-foreground" }}
               >
                 {l.label}
               </Link>
             ))}
+            <Link
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className="mt-5 rounded-full bg-brand px-5 py-3 text-center text-sm font-semibold text-background"
+            >
+              Let's Work Together
+            </Link>
           </nav>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 }
