@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Link } from "@tanstack/react-router";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 
@@ -40,12 +41,12 @@ export function PageCTA({ heading, sub }: { heading: string; sub?: string }) {
     <section className="surface mt-20 rounded-2xl p-8 md:p-12">
       <h2 className="font-display text-2xl font-extrabold md:text-3xl">{heading}</h2>
       {sub && <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">{sub}</p>}
-      <a
-        href="/contact"
+      <Link
+        to="/contact"
         className="mt-7 inline-flex rounded-full bg-brand px-6 py-3 text-sm font-semibold text-background transition-colors hover:bg-brand-soft"
       >
         Let's Work Together
-      </a>
+      </Link>
     </section>
   );
 }
