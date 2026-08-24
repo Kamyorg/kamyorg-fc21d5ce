@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { NAV_LINKS } from "@/lib/site-data";
+import { NAV_LINKS, CONTACT } from "@/lib/site-data";
 import kamyorgLogo from "@/assets/kamyorg-logo.png.asset.json";
 
 export function Nav() {
@@ -56,10 +56,7 @@ export function Nav() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link
-            to="/contact"
-            className="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-background transition-colors hover:bg-brand-soft md:inline-flex"
-          >
+          <Link to="/contact" className="btn-primary hidden md:inline-flex">
             Let's Work Together
           </Link>
           <button
@@ -87,27 +84,37 @@ export function Nav() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background lg:hidden">
-          <nav className="container-site flex flex-col py-4">
-            {NAV_LINKS.map((l) => (
+        <div className="fixed inset-x-0 bottom-0 top-16 overflow-y-auto border-t border-border bg-background lg:hidden">
+          <nav className="container-site flex min-h-full flex-col pb-10 pt-2">
+            {NAV_LINKS.map((l, i) => (
               <Link
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
                 activeOptions={{ exact: l.to === "/" }}
-                className="border-b border-border py-4 font-display text-lg font-semibold text-muted-foreground last:border-0"
+                className="flex items-baseline gap-4 border-b border-border py-5 font-display text-2xl font-extrabold tracking-tight text-muted-foreground"
                 activeProps={{ className: "text-foreground" }}
               >
+                <span className="text-[0.7rem] font-semibold tracking-[0.2em] text-brand">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
                 {l.label}
               </Link>
             ))}
-            <Link
-              to="/contact"
-              onClick={() => setOpen(false)}
-              className="mt-5 rounded-full bg-brand px-5 py-3 text-center text-sm font-semibold text-background"
-            >
+
+            <Link to="/contact" onClick={() => setOpen(false)} className="btn-primary mt-8 w-full">
               Let's Work Together
             </Link>
+
+            <div className="mt-8 space-y-1.5 text-sm text-muted-foreground">
+              <a href={`mailto:${CONTACT.email}`} className="block">
+                {CONTACT.email}
+              </a>
+              <a href={CONTACT.whatsappUrl} target="_blank" rel="noreferrer" className="block">
+                WhatsApp {CONTACT.whatsapp}
+              </a>
+              <p>{CONTACT.availability}</p>
+            </div>
           </nav>
         </div>
       )}
