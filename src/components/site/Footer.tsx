@@ -1,13 +1,20 @@
 import { Link } from "@tanstack/react-router";
-import { CONTACT, NAV_LINKS } from "@/lib/site-data";
+import { CONTACT } from "@/lib/site-data";
 import kamyorgLogo from "@/assets/kamyorg-logo.png.asset.json";
+
+const EXPLORE = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/services", label: "Services" },
+  { to: "/work", label: "Work" },
+] as const;
 
 export function Footer() {
   return (
-    <footer className="hairline">
+    <footer className="hairline bg-background-alt">
       <div className="container-site py-14 md:py-16">
-        <div className="grid gap-10 md:grid-cols-12">
-          <div className="md:col-span-5">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12">
+          <div className="lg:col-span-5">
             <div className="flex items-center gap-2.5">
               <img
                 src={kamyorgLogo.url}
@@ -22,14 +29,14 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Shopify development, design and growth. Led by Mohammed Kamaldeen (Kamyorg).
+              Shopify development, design and store growth, led by Mohammed Kamaldeen (Kamyorg).
             </p>
           </div>
 
-          <div className="md:col-span-3">
-            <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Pages</div>
+          <div className="lg:col-span-2">
+            <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Explore</div>
             <ul className="mt-4 space-y-2.5 text-sm">
-              {NAV_LINKS.map((l) => (
+              {EXPLORE.map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} className="text-muted-foreground transition-colors hover:text-foreground">
                     {l.label}
@@ -39,13 +46,18 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-4">
-            <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Contact</div>
+          <div className="lg:col-span-3">
+            <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Connect</div>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li>
-                <a href={`mailto:${CONTACT.email}`} className="text-muted-foreground transition-colors hover:text-foreground">
-                  {CONTACT.email}
-                </a>
+                <Link to="/testimonials" className="text-muted-foreground transition-colors hover:text-foreground">
+                  Testimonials
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-muted-foreground transition-colors hover:text-foreground">
+                  Contact
+                </Link>
               </li>
               <li>
                 <a
@@ -54,12 +66,23 @@ export function Footer() {
                   rel="noreferrer"
                   className="text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  WhatsApp {CONTACT.whatsapp}
+                  WhatsApp
                 </a>
               </li>
-              <li className="text-muted-foreground">London, United Kingdom</li>
-              <li className="text-muted-foreground">Working worldwide</li>
+              <li>
+                <a href={`mailto:${CONTACT.email}`} className="text-muted-foreground transition-colors hover:text-foreground">
+                  Email
+                </a>
+              </li>
             </ul>
+          </div>
+
+          <div className="lg:col-span-2">
+            <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Availability</div>
+            <p className="mt-4 text-sm font-semibold">{CONTACT.availability}</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Strategic partner: TheHeroes Agency
+            </p>
           </div>
         </div>
 

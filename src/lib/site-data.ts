@@ -7,15 +7,14 @@ export const CONTACT = {
   email: "kamyorg001@gmail.com",
   whatsapp: "+44 7455 903789",
   whatsappUrl: "https://wa.me/447455903789",
-  location: "London, United Kingdom · Working worldwide",
+  availability: "Remote / Worldwide",
 };
 
 export const NAV_LINKS = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
-  { to: "/portfolio", label: "Portfolio" },
-  { to: "/case-studies", label: "Case Studies" },
+  { to: "/work", label: "Work" },
   { to: "/testimonials", label: "Testimonials" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -123,7 +122,7 @@ export const FAQS = [
   { q: "What do you actually do?", a: "I build, redesign and manage Shopify stores. I also handle related work like SEO, conversion fixes, email marketing, ads and graphic design." },
   { q: "Can you redesign my existing store?", a: "Yes. That's a big part of my work. I can refresh your store without losing your products, content, customer data or SEO." },
   { q: "How long does a Shopify project take?", a: "Most stores take between 2 and 4 weeks depending on the size and what's included. I'll give you a clear timeline before we start." },
-  { q: "Do you work with people outside the UK?", a: "Yes. I work remotely with clients in the US, France, Spain, Brazil, Colombia and other countries. Most communication happens by email or WhatsApp." },
+  { q: "Where are you based?", a: "I work remotely with clients worldwide. Most communication happens over email or WhatsApp, and time zones have never been an issue." },
   { q: "Do you also help with Wix or Squarespace?", a: "Yes, but Shopify is my main focus. If your project suits Wix or Squarespace better, I can build that instead." },
   { q: "Can you help after the store is launched?", a: "Yes. I offer ongoing support for updates, fixes, product uploads, marketing and general store management." },
 ];

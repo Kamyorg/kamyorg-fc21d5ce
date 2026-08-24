@@ -10,10 +10,12 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
@@ -35,51 +37,53 @@
   --color-ring: var(--ring);
 
   /* One typeface across the whole site */
-  --font-display: "Manrope", system-ui, sans-serif;
-  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
 
-  --shadow-elevated: 0 30px 80px -34px rgb(0 0 0 / 0.8), 0 0 0 1px rgb(255 255 255 / 0.04);
+  --shadow-elevated: 0 34px 90px -40px rgb(0 0 0 / 0.85), 0 0 0 1px rgb(255 255 255 / 0.05);
 }
 
 :root {
-  --radius: 0.85rem;
+  --radius: 0.9rem;
 
-  /* Deep, warm-neutral near-black */
-  --background: oklch(0.145 0.006 60);
-  --surface: oklch(0.185 0.007 60);
-  --foreground: oklch(0.965 0.004 80);
-  --card: oklch(0.195 0.007 60);
-  --card-foreground: oklch(0.965 0.004 80);
-  --popover: oklch(0.195 0.007 60);
-  --popover-foreground: oklch(0.965 0.004 80);
+  /* Cool ink foundation — deep, high contrast, agency-grade */
+  --background: oklch(0.168 0.014 258);
+  --background-alt: oklch(0.196 0.016 258);
+  --surface: oklch(0.212 0.017 258);
+  --surface-strong: oklch(0.246 0.019 258);
+  --foreground: oklch(0.975 0.004 250);
+  --card: oklch(0.212 0.017 258);
+  --card-foreground: oklch(0.975 0.004 250);
+  --popover: oklch(0.212 0.017 258);
+  --popover-foreground: oklch(0.975 0.004 250);
 
-  /* Warm premium accent — used sparingly */
-  --brand: oklch(0.79 0.115 74);
-  --brand-soft: oklch(0.87 0.075 80);
-  --brand-deep: oklch(0.58 0.105 66);
+  /* Single distinctive accent — electric azure */
+  --brand: oklch(0.7 0.161 236);
+  --brand-soft: oklch(0.79 0.126 232);
+  --brand-deep: oklch(0.53 0.148 250);
 
-  --primary: oklch(0.79 0.115 74);
-  --primary-foreground: oklch(0.145 0.006 60);
-  --secondary: oklch(0.225 0.007 60);
-  --secondary-foreground: oklch(0.965 0.004 80);
-  --muted: oklch(0.225 0.007 60);
-  --muted-foreground: oklch(0.715 0.012 75);
-  --accent: oklch(0.235 0.012 70);
-  --accent-foreground: oklch(0.965 0.004 80);
-  --destructive: oklch(0.55 0.19 27);
+  --primary: oklch(0.7 0.161 236);
+  --primary-foreground: oklch(0.168 0.014 258);
+  --secondary: oklch(0.246 0.019 258);
+  --secondary-foreground: oklch(0.975 0.004 250);
+  --muted: oklch(0.246 0.019 258);
+  --muted-foreground: oklch(0.735 0.015 255);
+  --accent: oklch(0.27 0.028 250);
+  --accent-foreground: oklch(0.975 0.004 250);
+  --destructive: oklch(0.58 0.19 25);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(1 0 0 / 9%);
-  --border-strong: oklch(1 0 0 / 16%);
-  --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.79 0.115 74);
-  --sidebar: oklch(0.195 0.007 60);
-  --sidebar-foreground: oklch(0.965 0.004 80);
-  --sidebar-primary: oklch(0.79 0.115 74);
-  --sidebar-primary-foreground: oklch(0.145 0.006 60);
-  --sidebar-accent: oklch(0.235 0.012 70);
-  --sidebar-accent-foreground: oklch(0.965 0.004 80);
-  --sidebar-border: oklch(1 0 0 / 9%);
-  --sidebar-ring: oklch(0.79 0.115 74);
+  --border: oklch(1 0 0 / 10%);
+  --border-strong: oklch(1 0 0 / 18%);
+  --input: oklch(1 0 0 / 13%);
+  --ring: oklch(0.7 0.161 236);
+  --sidebar: oklch(0.212 0.017 258);
+  --sidebar-foreground: oklch(0.975 0.004 250);
+  --sidebar-primary: oklch(0.7 0.161 236);
+  --sidebar-primary-foreground: oklch(0.168 0.014 258);
+  --sidebar-accent: oklch(0.27 0.028 250);
+  --sidebar-accent-foreground: oklch(0.975 0.004 250);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.7 0.161 236);
 }
 
 @layer base {
@@ -102,7 +106,7 @@
     text-wrap: balance;
   }
   p { text-wrap: pretty; }
-  ::selection { background: var(--color-brand); color: oklch(0.145 0.006 60); }
+  ::selection { background: var(--color-brand); color: oklch(0.168 0.014 258); }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -131,6 +135,11 @@
   border: 1px solid var(--border);
 }
 
+@utility surface-alt {
+  background: var(--background-alt);
+  border: 1px solid var(--border);
+}
+
 @utility hairline {
   border-top: 1px solid var(--border);
 }
@@ -145,9 +154,39 @@
 
 /* Restrained glass, used only for floating nav */
 @utility glass {
-  background: color-mix(in oklab, var(--background) 78%, transparent);
-  backdrop-filter: blur(16px);
+  background: color-mix(in oklab, var(--background) 76%, transparent);
+  backdrop-filter: blur(18px);
   border: 1px solid var(--border);
+}
+
+@utility btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.8rem 1.6rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: var(--brand);
+  color: oklch(0.168 0.014 258);
+  transition: background-color 0.2s ease;
+  &:hover { background: var(--brand-soft); }
+}
+
+@utility btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.8rem 1.6rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid var(--border-strong);
+  color: var(--foreground);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  &:hover { border-color: var(--brand); background: color-mix(in oklab, var(--brand) 10%, transparent); }
 }
 
 /* Subtle page transition */
