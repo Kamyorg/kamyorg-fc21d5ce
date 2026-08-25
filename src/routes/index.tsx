@@ -11,16 +11,14 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Kamyorg Agency builds, redesigns and manages Shopify stores. Shopify development, design and growth, led by Mohammed Kamaldeen from London and working worldwide.",
+          "Kamyorg Agency builds, redesigns and manages Shopify stores. Shopify development, design and store growth, led by Mohammed Kamaldeen (Kamyorg). Remote, worldwide.",
       },
       { property: "og:title", content: "Kamyorg Agency — Shopify Development & Growth" },
       {
         property: "og:description",
-        content: "Shopify development, design and growth. Led by Mohammed Kamaldeen (Kamyorg), London — working worldwide.",
+        content: "Shopify development, design and store growth, led by Mohammed Kamaldeen (Kamyorg). Remote / Worldwide.",
       },
-      { property: "og:url", content: "https://kamyorgagency.lovable.app/" },
     ],
-    links: [{ rel: "canonical", href: "https://kamyorgagency.lovable.app/" }],
   }),
   component: HomePage,
 });
@@ -33,7 +31,7 @@ function SectionHead({
 }: {
   eyebrow: string;
   title: string;
-  to?: "/about" | "/services" | "/portfolio" | "/case-studies" | "/testimonials" | "/contact";
+  to?: "/about" | "/services" | "/work" | "/testimonials" | "/contact";
   linkLabel?: string;
 }) {
   return (
@@ -72,33 +70,27 @@ function HomePage() {
               Kamyorg Agency builds and improves Shopify stores.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              Led by Mohammed Kamaldeen — known as Kamyorg — from London, working with brands worldwide.
+              Led by Mohammed Kamaldeen — known as Kamyorg — working remotely with brands worldwide.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
-              <Link
-                to="/contact"
-                className="rounded-full bg-brand px-6 py-3 text-sm font-semibold text-background transition-colors hover:bg-brand-soft"
-              >
+              <Link to="/contact" className="btn-primary">
                 Let's Work Together
               </Link>
-              <Link
-                to="/portfolio"
-                className="rounded-full border border-border-strong px-6 py-3 text-sm font-semibold transition-colors hover:border-brand"
-              >
-                View Portfolio
+              <Link to="/work" className="btn-ghost">
+                View Work
               </Link>
             </div>
           </div>
         </section>
 
-        {/* 2. Trust / proof introduction */}
-        <section className="hairline">
+        {/* 2. Trust / proof */}
+        <section className="hairline bg-background-alt">
           <div className="container-site grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4 md:py-14">
             {[
-              { k: "Based in", v: "London, UK" },
-              { k: "Working", v: "Worldwide" },
-              { k: "Focus", v: "Shopify" },
+              { k: "Availability", v: CONTACT.availability },
+              { k: "Main focus", v: "Shopify" },
               { k: "Also on", v: "Wix & Squarespace" },
+              { k: "Partner", v: "TheHeroes Agency" },
             ].map((s) => (
               <div key={s.k}>
                 <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{s.k}</div>
@@ -123,7 +115,7 @@ function HomePage() {
 
         {/* 4. Selected work */}
         <section className="container-site section pt-0">
-          <SectionHead eyebrow="Selected Work" title="Recent Shopify projects" to="/portfolio" linkLabel="View portfolio" />
+          <SectionHead eyebrow="Selected Work" title="Recent Shopify projects" to="/work" linkLabel="View all work" />
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {selectedWork.map((p) => (
               <article key={p.slug} className="surface rounded-2xl p-7">
@@ -141,7 +133,7 @@ function HomePage() {
           </div>
         </section>
 
-        {/* 5. About introduction */}
+        {/* 5. About introduction + 6. Partnership */}
         <section className="container-site section pt-0">
           <div className="grid gap-10 lg:grid-cols-12">
             <div className="lg:col-span-7">
@@ -150,7 +142,8 @@ function HomePage() {
                 The person behind Kamyorg Agency
               </h2>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">
-                Mohammed Kamaldeen is a Shopify developer, designer and store growth specialist working from London.
+                Mohammed Kamaldeen is a Shopify developer, designer and store growth specialist working remotely with
+                clients worldwide.
               </p>
               <Link
                 to="/about"
@@ -160,7 +153,6 @@ function HomePage() {
               </Link>
             </div>
             <div className="lg:col-span-5">
-              {/* 6. Strategic partnership */}
               <div className="surface rounded-2xl p-7">
                 <p className="eyebrow">Partnership</p>
                 <div className="mt-5 flex items-center gap-4">
@@ -174,7 +166,7 @@ function HomePage() {
                   />
                   <div>
                     <div className="font-display font-bold">TheHeroes Agency</div>
-                    <div className="text-sm text-muted-foreground">Partner on larger client projects</div>
+                    <div className="text-sm text-muted-foreground">Strategic partner on larger client projects</div>
                   </div>
                 </div>
               </div>
@@ -198,7 +190,7 @@ function HomePage() {
           </div>
         </section>
 
-        {/* 8. Process preview */}
+        {/* 8. Working process */}
         <section className="container-site section pt-0">
           <SectionHead eyebrow="Process" title="How a project runs" to="/services" linkLabel="More detail" />
           <ol className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
@@ -211,8 +203,8 @@ function HomePage() {
           </ol>
         </section>
 
-        {/* 9. Contact CTA */}
-        <section className="hairline">
+        {/* 9. Final CTA */}
+        <section className="hairline bg-background-alt">
           <div className="container-site section">
             <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-2xl">
@@ -221,13 +213,10 @@ function HomePage() {
                   Tell me about your store
                 </h2>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-                  {CONTACT.email} · WhatsApp {CONTACT.whatsapp}
+                  {CONTACT.email} · WhatsApp {CONTACT.whatsapp} · {CONTACT.availability}
                 </p>
               </div>
-              <Link
-                to="/contact"
-                className="shrink-0 self-start rounded-full bg-brand px-6 py-3 text-sm font-semibold text-background transition-colors hover:bg-brand-soft lg:self-auto"
-              >
+              <Link to="/contact" className="btn-primary shrink-0">
                 Let's Work Together
               </Link>
             </div>
@@ -235,7 +224,6 @@ function HomePage() {
         </section>
       </main>
 
-      {/* 10. Footer */}
       <Footer />
     </div>
   );
