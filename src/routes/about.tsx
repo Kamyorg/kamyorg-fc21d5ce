@@ -6,9 +6,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Mohammed Kamaldeen — Kamyorg Agency" },
-      { name: "description", content: "Mohammed Kamaldeen (Kamyorg) is a Shopify developer, designer and store growth specialist based in London, working with brands worldwide." },
+      { name: "description", content: "Mohammed Kamaldeen (Kamyorg) is a Shopify developer, designer and store growth specialist working remotely with brands worldwide." },
       { property: "og:title", content: "About Mohammed Kamaldeen — Kamyorg Agency" },
-      { property: "og:description", content: "Shopify developer, designer and store growth specialist based in London, working with brands worldwide." },
+      { property: "og:description", content: "Shopify developer, designer and store growth specialist working remotely with brands worldwide." },
     ],
   }),
   component: AboutPage,
@@ -19,12 +19,12 @@ function AboutPage() {
     <PageShell
       eyebrow="About"
       title="I'm Mohammed Kamaldeen — most people know me as Kamyorg."
-      intro="I build, redesign and manage Shopify stores. I work from London with brands in the UK, US, Europe and South America."
+      intro="I build, redesign and manage Shopify stores. I work remotely with brands in Europe, North America and South America."
     >
       <div className="grid gap-10 lg:grid-cols-3">
         <div className="space-y-5 text-base leading-relaxed text-muted-foreground lg:col-span-2">
           <p>
-            I started out fixing small problems on other people's stores — a broken layout here, a checkout issue
+            I started out fixing small problems on other people’s stores — a broken layout here, a checkout issue
             there. Over time that turned into full builds and redesigns, and then into looking after stores long
             after launch.
           </p>
@@ -40,12 +40,12 @@ function AboutPage() {
           <p>I also work with TheHeroes Agency on larger client projects.</p>
         </div>
 
-        <aside className="glass rounded-2xl p-6">
+        <aside className="surface rounded-2xl p-6">
           <div className="text-xs uppercase tracking-wider text-muted-foreground">Details</div>
           <dl className="mt-4 space-y-4 text-sm">
             <div>
-              <dt className="text-muted-foreground">Based in</dt>
-              <dd className="mt-1">{CONTACT.location}</dd>
+              <dt className="text-muted-foreground">Availability</dt>
+              <dd className="mt-1">{CONTACT.availability}</dd>
             </div>
             <div>
               <dt className="text-muted-foreground">Email</dt>
