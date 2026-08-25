@@ -27,7 +27,7 @@ function ServicesPage() {
             <h2 className="font-display text-2xl font-bold">{g.group}</h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {g.items.map((i) => (
-                <div key={i.t} className="glass rounded-2xl p-6 transition-colors hover:border-brand/40">
+                <div key={i.t} className="surface rounded-2xl p-6 transition-colors hover:border-brand/40">
                   <h3 className="font-display text-lg font-semibold">{i.t}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{i.d}</p>
                 </div>
@@ -53,7 +53,7 @@ function ServicesPage() {
       <div className="mt-14">
         <Link
           to="/contact"
-          className="inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 text-sm font-semibold text-background transition-colors hover:bg-brand-soft"
+          className="btn-primary"
         >
           Tell me about your project <span aria-hidden>→</span>
         </Link>

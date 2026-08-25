@@ -43,7 +43,7 @@ function ContactPage() {
       intro="Tell me a little about your project and I'll get back to you with a plan, a timeline and a price."
     >
       <div className="grid gap-10 lg:grid-cols-5">
-        <form onSubmit={onSubmit} className="glass rounded-3xl p-7 lg:col-span-3">
+        <form onSubmit={onSubmit} className="surface rounded-3xl p-7 lg:col-span-3">
           <div className="grid gap-5 sm:grid-cols-2">
             <label className="text-sm">
               <span className="text-muted-foreground">Name</span>
@@ -83,7 +83,7 @@ function ContactPage() {
           </div>
           <button
             type="submit"
-            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand px-5 py-3.5 text-sm font-semibold text-background transition-colors hover:bg-brand-soft sm:w-auto"
+            className="btn-primary mt-6 w-full sm:w-auto"
           >
             Send enquiry <span aria-hidden>→</span>
           </button>
@@ -95,17 +95,17 @@ function ContactPage() {
         </form>
 
         <aside className="lg:col-span-2 space-y-4">
-          <a href={`mailto:${CONTACT.email}`} className="glass block rounded-2xl p-6 transition-colors hover:border-brand/40">
+          <a href={`mailto:${CONTACT.email}`} className="surface block rounded-2xl p-6 transition-colors hover:border-brand/40">
             <div className="text-xs uppercase tracking-wider text-muted-foreground">Email</div>
             <div className="mt-1.5 font-display text-lg font-semibold">{CONTACT.email}</div>
           </a>
-          <a href={CONTACT.whatsappUrl} target="_blank" rel="noreferrer" className="glass block rounded-2xl p-6 transition-colors hover:border-brand/40">
+          <a href={CONTACT.whatsappUrl} target="_blank" rel="noreferrer" className="surface block rounded-2xl p-6 transition-colors hover:border-brand/40">
             <div className="text-xs uppercase tracking-wider text-muted-foreground">WhatsApp</div>
             <div className="mt-1.5 font-display text-lg font-semibold">{CONTACT.whatsapp}</div>
           </a>
-          <div className="glass rounded-2xl p-6">
-            <div className="text-xs uppercase tracking-wider text-muted-foreground">Based in</div>
-            <div className="mt-1.5 text-sm">{CONTACT.location}</div>
+          <div className="surface rounded-2xl p-6">
+            <div className="text-xs uppercase tracking-wider text-muted-foreground">Availability</div>
+            <div className="mt-1.5 text-sm">{CONTACT.availability}</div>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               I usually reply within a day. Most projects start with a short call or a few messages.
             </p>

@@ -23,7 +23,7 @@ function TestimonialsPage() {
     >
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {REVIEWS.map((r) => (
-          <figure key={r.n + r.r} className="glass flex flex-col rounded-2xl p-6">
+          <figure key={r.n + r.r} className="surface flex flex-col rounded-2xl p-6">
             <blockquote className="text-sm leading-relaxed text-muted-foreground">"{r.q}"</blockquote>
             <figcaption className="mt-5 border-t border-border pt-4">
               <div className="font-display font-semibold">{r.n}</div>
@@ -46,7 +46,7 @@ function TestimonialsPage() {
       </section>
 
       <div className="mt-12">
-        <Link to="/contact" className="inline-flex rounded-xl bg-brand px-5 py-3 text-sm font-semibold text-background hover:bg-brand-soft">
+        <Link to="/contact" className="btn-primary">
           Get in touch
         </Link>
       </div>
