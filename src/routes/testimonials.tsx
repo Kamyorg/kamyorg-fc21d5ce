@@ -5,9 +5,9 @@ import { REVIEWS, FAQS } from "@/lib/site-data";
 export const Route = createFileRoute("/testimonials")({
   head: () => ({
     meta: [
-      { title: "Client Feedback — Kamyorg Agency" },
+      { title: "Client Feedback — Kamyorg" },
       { name: "description", content: "What store owners in the UK, US, France, Spain, Brazil and Colombia say about working with Mohammed Kamaldeen on their Shopify stores." },
-      { property: "og:title", content: "Client Feedback — Kamyorg Agency" },
+      { property: "og:title", content: "Client Feedback — Kamyorg" },
       { property: "og:description", content: "What store owners say about working with Mohammed Kamaldeen on their Shopify stores." },
     ],
   }),

@@ -4,7 +4,7 @@ import projBon from "@/assets/project-bonceero.jpg";
 import projSlim from "@/assets/project-slimora.jpg";
 
 export const CONTACT = {
-  email: "kamyorg001@gmail.com",
+  email: "info@kamyorg.com",
   whatsapp: "+44 7455 903789",
   whatsappUrl: "https://wa.me/447455903789",
   availability: "Remote / Worldwide",
@@ -14,7 +14,6 @@ export const NAV_LINKS = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
-  { to: "/work", label: "Work" },
   { to: "/testimonials", label: "Testimonials" },
   { to: "/contact", label: "Contact" },
 ] as const;

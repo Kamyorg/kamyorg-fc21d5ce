@@ -6,9 +6,9 @@ import { CONTACT } from "@/lib/site-data";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Kamyorg Agency — Shopify Developer" },
-      { name: "description", content: "Tell me about your Shopify project. Email kamyorg001@gmail.com or message me on WhatsApp and I'll reply with a plan, timeline and price." },
-      { property: "og:title", content: "Contact Kamyorg Agency — Shopify Developer" },
+      { title: "Contact Kamyorg — Shopify Developer" },
+      { name: "description", content: "Tell me about your Shopify project. Email info@kamyorg.com or message me on WhatsApp and I'll reply with a plan, timeline and price." },
+      { property: "og:title", content: "Contact Kamyorg — Shopify Developer" },
       { property: "og:description", content: "Tell me about your Shopify project and I'll reply with a plan, timeline and price." },
     ],
   }),

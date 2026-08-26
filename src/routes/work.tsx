@@ -5,13 +5,13 @@ import { PROJECTS } from "@/lib/site-data";
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
-      { title: "Work — Shopify Stores by Kamyorg Agency" },
+      { title: "Work — Shopify Stores by Kamyorg" },
       {
         name: "description",
         content:
-          "Shopify builds, redesigns and store improvements by Kamyorg Agency: RebelShape.fr, Trade-collector.com, Bon-Ceero and Slimora-Sculpt.",
+          "Shopify builds, redesigns and store improvements by Kamyorg: RebelShape.fr, Trade-collector.com, Bon-Ceero and Slimora-Sculpt.",
       },
-      { property: "og:title", content: "Work — Shopify Stores by Kamyorg Agency" },
+      { property: "og:title", content: "Work — Shopify Stores by Kamyorg" },
       { property: "og:description", content: "Shopify builds, redesigns and store improvements, project by project." },
     ],
   }),

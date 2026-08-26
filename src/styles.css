@@ -36,54 +36,53 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  /* One typeface across the whole site */
   --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
   --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
 
-  --shadow-elevated: 0 34px 90px -40px rgb(0 0 0 / 0.85), 0 0 0 1px rgb(255 255 255 / 0.05);
+  --shadow-elevated: 0 30px 80px -44px rgb(0 0 0 / 0.9), 0 0 0 1px rgb(255 255 255 / 0.04);
 }
 
 :root {
-  --radius: 0.9rem;
+  --radius: 0.85rem;
 
-  /* Cool ink foundation — deep, high contrast, agency-grade */
-  --background: oklch(0.168 0.014 258);
-  --background-alt: oklch(0.196 0.016 258);
-  --surface: oklch(0.212 0.017 258);
-  --surface-strong: oklch(0.246 0.019 258);
-  --foreground: oklch(0.975 0.004 250);
-  --card: oklch(0.212 0.017 258);
-  --card-foreground: oklch(0.975 0.004 250);
-  --popover: oklch(0.212 0.017 258);
-  --popover-foreground: oklch(0.975 0.004 250);
+  /* Warm ink foundation — near-black charcoal with a faint warm cast */
+  --background: oklch(0.158 0.006 60);
+  --background-alt: oklch(0.192 0.007 62);
+  --surface: oklch(0.213 0.008 64);
+  --surface-strong: oklch(0.248 0.009 66);
+  --foreground: oklch(0.965 0.006 80);
+  --card: oklch(0.213 0.008 64);
+  --card-foreground: oklch(0.965 0.006 80);
+  --popover: oklch(0.213 0.008 64);
+  --popover-foreground: oklch(0.965 0.006 80);
 
-  /* Single distinctive accent — electric azure */
-  --brand: oklch(0.7 0.161 236);
-  --brand-soft: oklch(0.79 0.126 232);
-  --brand-deep: oklch(0.53 0.148 250);
+  /* Single restrained accent — warm burnished sand */
+  --brand: oklch(0.815 0.078 78);
+  --brand-soft: oklch(0.882 0.055 82);
+  --brand-deep: oklch(0.62 0.075 70);
 
-  --primary: oklch(0.7 0.161 236);
-  --primary-foreground: oklch(0.168 0.014 258);
-  --secondary: oklch(0.246 0.019 258);
-  --secondary-foreground: oklch(0.975 0.004 250);
-  --muted: oklch(0.246 0.019 258);
-  --muted-foreground: oklch(0.735 0.015 255);
-  --accent: oklch(0.27 0.028 250);
-  --accent-foreground: oklch(0.975 0.004 250);
-  --destructive: oklch(0.58 0.19 25);
+  --primary: oklch(0.815 0.078 78);
+  --primary-foreground: oklch(0.158 0.006 60);
+  --secondary: oklch(0.248 0.009 66);
+  --secondary-foreground: oklch(0.965 0.006 80);
+  --muted: oklch(0.248 0.009 66);
+  --muted-foreground: oklch(0.735 0.009 78);
+  --accent: oklch(0.268 0.012 70);
+  --accent-foreground: oklch(0.965 0.006 80);
+  --destructive: oklch(0.58 0.16 28);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --border-strong: oklch(1 0 0 / 18%);
-  --input: oklch(1 0 0 / 13%);
-  --ring: oklch(0.7 0.161 236);
-  --sidebar: oklch(0.212 0.017 258);
-  --sidebar-foreground: oklch(0.975 0.004 250);
-  --sidebar-primary: oklch(0.7 0.161 236);
-  --sidebar-primary-foreground: oklch(0.168 0.014 258);
-  --sidebar-accent: oklch(0.27 0.028 250);
-  --sidebar-accent-foreground: oklch(0.975 0.004 250);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.7 0.161 236);
+  --border: oklch(1 0 0 / 9%);
+  --border-strong: oklch(1 0 0 / 17%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.815 0.078 78);
+  --sidebar: oklch(0.213 0.008 64);
+  --sidebar-foreground: oklch(0.965 0.006 80);
+  --sidebar-primary: oklch(0.815 0.078 78);
+  --sidebar-primary-foreground: oklch(0.158 0.006 60);
+  --sidebar-accent: oklch(0.268 0.012 70);
+  --sidebar-accent-foreground: oklch(0.965 0.006 80);
+  --sidebar-border: oklch(1 0 0 / 9%);
+  --sidebar-ring: oklch(0.815 0.078 78);
 }
 
 @layer base {
@@ -96,17 +95,17 @@
     background: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    letter-spacing: -0.005em;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.03em;
+    font-weight: 600;
+    letter-spacing: -0.02em;
     text-wrap: balance;
   }
   p { text-wrap: pretty; }
-  ::selection { background: var(--color-brand); color: oklch(0.168 0.014 258); }
+  ::selection { background: var(--color-brand); color: oklch(0.158 0.006 60); }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -125,9 +124,9 @@
 }
 
 @utility section {
-  padding-block: 4.5rem;
-  @media (min-width: 768px) { padding-block: 6rem; }
-  @media (min-width: 1280px) { padding-block: 7.5rem; }
+  padding-block: 4rem;
+  @media (min-width: 768px) { padding-block: 5.5rem; }
+  @media (min-width: 1280px) { padding-block: 6.5rem; }
 }
 
 @utility surface {
@@ -144,19 +143,27 @@
   border-top: 1px solid var(--border);
 }
 
+/* Layered overlay card, used for purposeful floating info */
+@utility overlay-card {
+  background: color-mix(in oklab, var(--background) 74%, transparent);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border-strong);
+  border-radius: 0.85rem;
+  box-shadow: 0 22px 50px -30px rgb(0 0 0 / 0.85);
+}
+
 @utility eyebrow {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--brand);
 }
 
-/* Restrained glass, used only for floating nav */
 @utility glass {
-  background: color-mix(in oklab, var(--background) 76%, transparent);
+  background: color-mix(in oklab, var(--background) 78%, transparent);
   backdrop-filter: blur(18px);
-  border: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 @utility btn-primary {
@@ -165,11 +172,11 @@
   justify-content: center;
   gap: 0.5rem;
   border-radius: 999px;
-  padding: 0.8rem 1.6rem;
+  padding: 0.75rem 1.5rem;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 500;
   background: var(--brand);
-  color: oklch(0.168 0.014 258);
+  color: oklch(0.158 0.006 60);
   transition: background-color 0.2s ease;
   &:hover { background: var(--brand-soft); }
 }
@@ -180,16 +187,15 @@
   justify-content: center;
   gap: 0.5rem;
   border-radius: 999px;
-  padding: 0.8rem 1.6rem;
+  padding: 0.75rem 1.5rem;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 500;
   border: 1px solid var(--border-strong);
   color: var(--foreground);
   transition: border-color 0.2s ease, background-color 0.2s ease;
-  &:hover { border-color: var(--brand); background: color-mix(in oklab, var(--brand) 10%, transparent); }
+  &:hover { border-color: var(--brand); background: color-mix(in oklab, var(--brand) 8%, transparent); }
 }
 
-/* Subtle page transition */
 @utility page-enter {
   animation: page-enter 0.32s cubic-bezier(0.22, 1, 0.36, 1) both;
 }

@@ -5,9 +5,9 @@ import { SERVICE_GROUPS, PROCESS } from "@/lib/site-data";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Shopify Services — Kamyorg Agency" },
+      { title: "Shopify Services — Kamyorg" },
       { name: "description", content: "Shopify design, development, redesigns, technical fixes, CRO, SEO, email marketing, ads, graphics and store management." },
-      { property: "og:title", content: "Shopify Services — Kamyorg Agency" },
+      { property: "og:title", content: "Shopify Services — Kamyorg" },
       { property: "og:description", content: "Shopify design, development, redesigns, fixes, CRO, SEO, email, ads and store management." },
     ],
   }),
