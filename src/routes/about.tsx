@@ -5,9 +5,9 @@ import { SKILLS, CONTACT } from "@/lib/site-data";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Mohammed Kamaldeen — Kamyorg Agency" },
+      { title: "About Mohammed Kamaldeen — Kamyorg" },
       { name: "description", content: "Mohammed Kamaldeen (Kamyorg) is a Shopify developer, designer and store growth specialist working remotely with brands worldwide." },
-      { property: "og:title", content: "About Mohammed Kamaldeen — Kamyorg Agency" },
+      { property: "og:title", content: "About Mohammed Kamaldeen — Kamyorg" },
       { property: "og:description", content: "Shopify developer, designer and store growth specialist working remotely with brands worldwide." },
     ],
   }),

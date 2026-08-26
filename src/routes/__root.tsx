@@ -77,9 +77,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Kamyorg Agency — Shopify Development & Growth" },
-      { name: "author", content: "Kamyorg Agency" },
-      { property: "og:site_name", content: "Kamyorg Agency" },
+      { title: "Kamyorg — Shopify Development & Growth" },
+      { name: "author", content: "Kamyorg" },
+      { property: "og:site_name", content: "Kamyorg" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
