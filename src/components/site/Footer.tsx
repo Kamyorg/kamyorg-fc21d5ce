@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { CONTACT } from "@/lib/site-data";
-import kamyorgLogo from "@/assets/kamyorg-logo.png.asset.json";
+import kamyorgMark from "@/assets/kamyorg-mark.png.asset.json";
 
 const EXPLORE = [
   { to: "/", label: "Home" },
@@ -17,19 +17,17 @@ export function Footer() {
           <div className="lg:col-span-5">
             <div className="flex items-center gap-2.5">
               <img
-                src={kamyorgLogo.url}
-                alt="Kamyorg Agency"
+                src={kamyorgMark.url}
+                alt="Kamyorg"
                 width={36}
                 height={36}
                 loading="lazy"
-                className="h-9 w-9 rounded-lg object-cover ring-1 ring-border"
+                className="h-9 w-9 rounded-full object-cover ring-1 ring-border"
               />
-              <span className="font-display text-base font-extrabold tracking-tight">
-                Kamyorg <span className="font-medium text-muted-foreground">Agency</span>
-              </span>
+              <span className="font-display text-base font-semibold tracking-tight">Kamyorg</span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Shopify development, design and store growth, led by Mohammed Kamaldeen (Kamyorg).
+              Shopify development, design and store growth by Mohammed Kamaldeen — working remotely with brands worldwide.
             </p>
           </div>
 
@@ -79,7 +77,7 @@ export function Footer() {
 
           <div className="lg:col-span-2">
             <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Availability</div>
-            <p className="mt-4 text-sm font-semibold">{CONTACT.availability}</p>
+            <p className="mt-4 text-sm font-medium">{CONTACT.availability}</p>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               Strategic partner: TheHeroes Agency
             </p>
@@ -87,7 +85,7 @@ export function Footer() {
         </div>
 
         <div className="hairline mt-12 flex flex-col gap-2 pt-6 text-xs text-muted-foreground sm:flex-row sm:justify-between">
-          <span>© {new Date().getFullYear()} Kamyorg Agency</span>
+          <span>© {new Date().getFullYear()} Kamyorg</span>
           <span>Shopify Development • Design • Growth</span>
         </div>
       </div>
