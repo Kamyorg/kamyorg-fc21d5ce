@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { NAV_LINKS, CONTACT } from "@/lib/site-data";
-import kamyorgLogo from "@/assets/kamyorg-logo.png.asset.json";
+import kamyorgMark from "@/assets/kamyorg-mark.png.asset.json";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,15 +30,13 @@ export function Nav() {
       <div className="container-site flex h-16 items-center justify-between md:h-20">
         <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-2.5">
           <img
-            src={kamyorgLogo.url}
-            alt="Kamyorg Agency"
+            src={kamyorgMark.url}
+            alt="Kamyorg"
             width={36}
             height={36}
-            className="h-9 w-9 rounded-lg object-cover ring-1 ring-border"
+            className="h-9 w-9 rounded-full object-cover ring-1 ring-border"
           />
-          <span className="font-display text-[0.95rem] font-extrabold tracking-tight sm:text-base">
-            Kamyorg <span className="font-medium text-muted-foreground">Agency</span>
-          </span>
+          <span className="font-display text-[0.95rem] font-semibold tracking-tight sm:text-base">Kamyorg</span>
         </Link>
 
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground lg:flex">
@@ -92,15 +90,23 @@ export function Nav() {
                 to={l.to}
                 onClick={() => setOpen(false)}
                 activeOptions={{ exact: l.to === "/" }}
-                className="flex items-baseline gap-4 border-b border-border py-5 font-display text-2xl font-extrabold tracking-tight text-muted-foreground"
+                className="flex items-baseline gap-4 border-b border-border py-5 font-display text-xl font-medium tracking-tight text-muted-foreground"
                 activeProps={{ className: "text-foreground" }}
               >
-                <span className="text-[0.7rem] font-semibold tracking-[0.2em] text-brand">
+                <span className="text-[0.7rem] font-medium tracking-[0.2em] text-brand">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 {l.label}
               </Link>
             ))}
+
+            <Link
+              to="/work"
+              onClick={() => setOpen(false)}
+              className="border-b border-border py-5 text-sm text-muted-foreground"
+            >
+              View my work →
+            </Link>
 
             <Link to="/contact" onClick={() => setOpen(false)} className="btn-primary mt-8 w-full">
               Let's Work Together
