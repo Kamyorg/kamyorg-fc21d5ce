@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SiShopify, SiWix, SiSquarespace, SiWhatsapp, SiInstagram, SiTiktok, SiKlaviyo } from "react-icons/si";
+import { SiShopify, SiWix, SiSquarespace, SiWhatsapp, SiInstagram, SiTiktok } from "react-icons/si";
 import { Mail, ArrowUpRight, Globe2 } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
@@ -66,7 +66,6 @@ const PLATFORMS = [
   { Icon: SiShopify, label: "Shopify" },
   { Icon: SiWix, label: "Wix" },
   { Icon: SiSquarespace, label: "Squarespace" },
-  { Icon: SiKlaviyo, label: "Klaviyo" },
   { Icon: SiInstagram, label: "Instagram" },
   { Icon: SiTiktok, label: "TikTok" },
 ];
@@ -106,8 +105,7 @@ function HomePage() {
             <div className="lg:col-span-7">
               <p className="eyebrow">Mohammed Kamaldeen — Kamyorg</p>
               <h1 className="mt-4 max-w-2xl font-display text-[1.9rem] font-medium leading-[1.18] tracking-tight sm:text-[2.45rem] lg:text-[2.9rem]">
-                Shopify developer and store growth specialist, building shops around how customers actually browse,
-                compare and buy.
+                Shopify stores built around how customers actually browse, compare and buy.
               </h1>
               <p className="mt-5 max-w-xl text-[0.95rem] leading-relaxed text-muted-foreground md:text-base">
                 If your store looks unfinished, feels slow or gets traffic that never converts, that's usually a
