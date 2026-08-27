@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SiShopify, SiWix, SiSquarespace, SiWhatsapp, SiInstagram, SiTiktok, SiKlaviyo } from "react-icons/si";
+import { SiShopify, SiWix, SiSquarespace, SiWhatsapp, SiInstagram, SiTiktok } from "react-icons/si";
 import { Mail, ArrowUpRight, Globe2 } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
@@ -66,7 +66,6 @@ const PLATFORMS = [
   { Icon: SiShopify, label: "Shopify" },
   { Icon: SiWix, label: "Wix" },
   { Icon: SiSquarespace, label: "Squarespace" },
-  { Icon: SiKlaviyo, label: "Klaviyo" },
   { Icon: SiInstagram, label: "Instagram" },
   { Icon: SiTiktok, label: "TikTok" },
 ];
