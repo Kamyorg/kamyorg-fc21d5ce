@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageShell } from "@/components/site/PageShell";
+import { SocialIcons } from "@/components/site/SocialIcons";
 import { CONTACT } from "@/lib/site-data";
 
 export const Route = createFileRoute("/contact")({
