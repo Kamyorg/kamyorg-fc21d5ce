@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { NAV_LINKS, CONTACT } from "@/lib/site-data";
+import { SocialIcons } from "@/components/site/SocialIcons";
 import kamyorgMark from "@/assets/kamyorg-mark.png.asset.json";
 
 export function Nav() {
