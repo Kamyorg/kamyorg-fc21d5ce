@@ -192,15 +192,14 @@ function AboutPage() {
             collectibles and general retail, with clients in Europe, North America and South America. Shopify is the
             main platform; I also build on Wix and Squarespace when a project suits them better.
           </p>
-          <ul className="mt-6 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-muted-foreground">
+          <ul className="mt-6 flex flex-wrap items-center gap-6">
             {[
               { Icon: SiShopify, label: "Shopify" },
               { Icon: SiWix, label: "Wix" },
               { Icon: SiSquarespace, label: "Squarespace" },
             ].map(({ Icon, label }) => (
-              <li key={label} className="flex items-center gap-2">
-                <Icon className="h-4 w-4 text-brand" aria-hidden />
-                {label}
+              <li key={label}>
+                <Icon role="img" aria-label={label} title={label} className="h-5 w-5 text-muted-foreground" />
               </li>
             ))}
           </ul>
