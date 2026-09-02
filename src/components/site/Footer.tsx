@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { CONTACT } from "@/lib/site-data";
+import { SocialIcons } from "@/components/site/SocialIcons";
 import kamyorgMark from "@/assets/kamyorg-mark.png.asset.json";
 
 const EXPLORE = [
