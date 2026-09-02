@@ -95,14 +95,10 @@ function ContactPage() {
         </form>
 
         <aside className="lg:col-span-2 space-y-4">
-          <a href={`mailto:${CONTACT.email}`} className="surface block rounded-2xl p-6 transition-colors hover:border-brand/40">
-            <div className="text-xs uppercase tracking-wider text-muted-foreground">Email</div>
-            <div className="mt-1.5 font-display text-lg font-semibold">{CONTACT.email}</div>
-          </a>
-          <a href={CONTACT.whatsappUrl} target="_blank" rel="noreferrer" className="surface block rounded-2xl p-6 transition-colors hover:border-brand/40">
-            <div className="text-xs uppercase tracking-wider text-muted-foreground">WhatsApp</div>
-            <div className="mt-1.5 font-display text-lg font-semibold">{CONTACT.whatsapp}</div>
-          </a>
+          <div className="surface rounded-2xl p-6">
+            <div className="text-xs uppercase tracking-wider text-muted-foreground">Reach me directly</div>
+            <SocialIcons className="mt-4" />
+          </div>
           <div className="surface rounded-2xl p-6">
             <div className="text-xs uppercase tracking-wider text-muted-foreground">Availability</div>
             <div className="mt-1.5 text-sm">{CONTACT.availability}</div>
