@@ -122,24 +122,9 @@ function HomePage() {
                 </Link>
               </div>
 
-              <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
-                <a
-                  href={CONTACT.whatsappUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
-                >
-                  <SiWhatsapp className="h-4 w-4 text-brand" aria-hidden />
-                  Chat on WhatsApp
-                </a>
-                <a
-                  href={`mailto:${CONTACT.email}`}
-                  className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
-                >
-                  <Mail className="h-4 w-4 text-brand" aria-hidden />
-                  {CONTACT.email}
-                </a>
-                <span className="inline-flex items-center gap-2">
+              <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
+                <SocialIcons size="sm" />
+                <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
                   <Globe2 className="h-4 w-4 text-brand" aria-hidden />
                   {CONTACT.availability}
                 </span>
