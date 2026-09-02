@@ -391,21 +391,9 @@ function HomePage() {
                   Send me the link and a short note about what's not working. I'll reply with what I'd change, how long
                   it takes and what it costs — no pressure either way.
                 </p>
-                <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
-                  <a href={`mailto:${CONTACT.email}`} className="inline-flex items-center gap-2 hover:text-foreground">
-                    <Mail className="h-4 w-4 text-brand" aria-hidden />
-                    {CONTACT.email}
-                  </a>
-                  <a
-                    href={CONTACT.whatsappUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 hover:text-foreground"
-                  >
-                    <SiWhatsapp className="h-4 w-4 text-brand" aria-hidden />
-                    {CONTACT.whatsapp}
-                  </a>
-                  <span className="inline-flex items-center gap-2">
+                <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
+                  <SocialIcons size="sm" />
+                  <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
                     <Globe2 className="h-4 w-4 text-brand" aria-hidden />
                     {CONTACT.availability}
                   </span>
