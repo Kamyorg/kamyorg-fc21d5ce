@@ -10,6 +10,18 @@ export const CONTACT = {
   availability: "Remote / Worldwide",
 };
 
+export const SOCIALS = [
+  { id: "instagram", label: "Instagram", href: "https://www.instagram.com/kamyorgexpert?igsi=MXU3NTlqbHh0dXQycw==" },
+  { id: "threads", label: "Threads", href: "https://www.threads.com/@kamyorgexpert" },
+  { id: "x", label: "X", href: "https://x.com/kamyorgexpert" },
+  { id: "telegram", label: "Telegram", href: "https://t.me/kamyorgexpert" },
+  { id: "pinterest", label: "Pinterest", href: "https://pin.it/HuEv4cW6J" },
+  { id: "tiktok", label: "TikTok", href: "https://www.tiktok.com/@kamyorg?_r=1&_t=ZS-99Au8iJ6dzk" },
+  { id: "youtube", label: "YouTube", href: "https://www.youtube.com/@Kamyorg" },
+  { id: "whatsapp", label: "WhatsApp", href: "https://wa.me/447455903789" },
+  { id: "email", label: "Email", href: "mailto:info@kamyorg.com" },
+] as const;
+
 export const NAV_LINKS = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },

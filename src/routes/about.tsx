@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiShopify, SiWix, SiSquarespace, SiWhatsapp } from "react-icons/si";
-import { Mail, Globe2 } from "lucide-react";
+import { Globe2 } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { SocialIcons } from "@/components/site/SocialIcons";
 import { CONTACT } from "@/lib/site-data";
 import portrait from "@/assets/kamyorg-portrait.png.asset.json";
 import heroesLogo from "@/assets/heroes-agency-logo.png.asset.json";
@@ -192,15 +193,14 @@ function AboutPage() {
             collectibles and general retail, with clients in Europe, North America and South America. Shopify is the
             main platform; I also build on Wix and Squarespace when a project suits them better.
           </p>
-          <ul className="mt-6 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-muted-foreground">
+          <ul className="mt-6 flex flex-wrap items-center gap-6">
             {[
               { Icon: SiShopify, label: "Shopify" },
               { Icon: SiWix, label: "Wix" },
               { Icon: SiSquarespace, label: "Squarespace" },
             ].map(({ Icon, label }) => (
-              <li key={label} className="flex items-center gap-2">
-                <Icon className="h-4 w-4 text-brand" aria-hidden />
-                {label}
+              <li key={label}>
+                <Icon role="img" aria-label={label} title={label} className="h-5 w-5 text-muted-foreground" />
               </li>
             ))}
           </ul>
@@ -321,13 +321,7 @@ function AboutPage() {
                 Chat on WhatsApp
               </a>
             </div>
-            <a
-              href={`mailto:${CONTACT.email}`}
-              className="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              <Mail className="h-4 w-4" aria-hidden />
-              {CONTACT.email}
-            </a>
+            <SocialIcons size="sm" className="mt-6" />
           </div>
         </section>
       </main>

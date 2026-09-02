@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SiShopify, SiWix, SiSquarespace, SiWhatsapp, SiInstagram, SiTiktok } from "react-icons/si";
-import { Mail, ArrowUpRight, Globe2 } from "lucide-react";
+import { SiShopify, SiWix, SiSquarespace } from "react-icons/si";
+import { ArrowUpRight, Globe2 } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { SocialIcons } from "@/components/site/SocialIcons";
 import { CONTACT, PROCESS, PROJECTS, REVIEWS, SERVICE_GROUPS } from "@/lib/site-data";
 import heroesLogo from "@/assets/heroes-agency-logo.png.asset.json";
 import portrait from "@/assets/kamyorg-portrait.png.asset.json";
@@ -66,8 +67,6 @@ const PLATFORMS = [
   { Icon: SiShopify, label: "Shopify" },
   { Icon: SiWix, label: "Wix" },
   { Icon: SiSquarespace, label: "Squarespace" },
-  { Icon: SiInstagram, label: "Instagram" },
-  { Icon: SiTiktok, label: "TikTok" },
 ];
 
 const VALUE = [
@@ -122,24 +121,9 @@ function HomePage() {
                 </Link>
               </div>
 
-              <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
-                <a
-                  href={CONTACT.whatsappUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
-                >
-                  <SiWhatsapp className="h-4 w-4 text-brand" aria-hidden />
-                  Chat on WhatsApp
-                </a>
-                <a
-                  href={`mailto:${CONTACT.email}`}
-                  className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
-                >
-                  <Mail className="h-4 w-4 text-brand" aria-hidden />
-                  {CONTACT.email}
-                </a>
-                <span className="inline-flex items-center gap-2">
+              <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
+                <SocialIcons size="sm" />
+                <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
                   <Globe2 className="h-4 w-4 text-brand" aria-hidden />
                   {CONTACT.availability}
                 </span>
@@ -190,11 +174,15 @@ function HomePage() {
           <div className="container-site py-10 md:py-12">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div className="flex flex-wrap items-center gap-x-7 gap-y-4">
+                <span className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Platforms I build on</span>
                 {PLATFORMS.map(({ Icon, label }) => (
-                  <span key={label} className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-                    <Icon className="h-[1.05rem] w-[1.05rem]" aria-hidden />
-                    {label}
-                  </span>
+                  <Icon
+                    key={label}
+                    role="img"
+                    aria-label={label}
+                    title={label}
+                    className="h-5 w-5 text-muted-foreground"
+                  />
                 ))}
               </div>
               <div className="flex items-center gap-3">
@@ -406,21 +394,9 @@ function HomePage() {
                   Send me the link and a short note about what's not working. I'll reply with what I'd change, how long
                   it takes and what it costs — no pressure either way.
                 </p>
-                <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
-                  <a href={`mailto:${CONTACT.email}`} className="inline-flex items-center gap-2 hover:text-foreground">
-                    <Mail className="h-4 w-4 text-brand" aria-hidden />
-                    {CONTACT.email}
-                  </a>
-                  <a
-                    href={CONTACT.whatsappUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 hover:text-foreground"
-                  >
-                    <SiWhatsapp className="h-4 w-4 text-brand" aria-hidden />
-                    {CONTACT.whatsapp}
-                  </a>
-                  <span className="inline-flex items-center gap-2">
+                <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
+                  <SocialIcons size="sm" />
+                  <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
                     <Globe2 className="h-4 w-4 text-brand" aria-hidden />
                     {CONTACT.availability}
                   </span>

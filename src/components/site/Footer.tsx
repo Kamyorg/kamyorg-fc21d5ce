@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { CONTACT } from "@/lib/site-data";
+import { SocialIcons } from "@/components/site/SocialIcons";
 import kamyorgMark from "@/assets/kamyorg-mark.png.asset.json";
 
 const EXPLORE = [
@@ -57,22 +58,8 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
-              <li>
-                <a
-                  href={CONTACT.whatsappUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  WhatsApp
-                </a>
-              </li>
-              <li>
-                <a href={`mailto:${CONTACT.email}`} className="text-muted-foreground transition-colors hover:text-foreground">
-                  Email
-                </a>
-              </li>
             </ul>
+            <SocialIcons size="sm" className="mt-5" />
           </div>
 
           <div className="lg:col-span-2">

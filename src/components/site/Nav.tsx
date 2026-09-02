@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { NAV_LINKS, CONTACT } from "@/lib/site-data";
+import { SocialIcons } from "@/components/site/SocialIcons";
 import kamyorgMark from "@/assets/kamyorg-mark.png.asset.json";
 
 export function Nav() {
@@ -112,14 +113,9 @@ export function Nav() {
               Let's Work Together
             </Link>
 
-            <div className="mt-8 space-y-1.5 text-sm text-muted-foreground">
-              <a href={`mailto:${CONTACT.email}`} className="block">
-                {CONTACT.email}
-              </a>
-              <a href={CONTACT.whatsappUrl} target="_blank" rel="noreferrer" className="block">
-                WhatsApp {CONTACT.whatsapp}
-              </a>
-              <p>{CONTACT.availability}</p>
+            <div className="mt-8">
+              <SocialIcons size="sm" />
+              <p className="mt-4 text-sm text-muted-foreground">{CONTACT.availability}</p>
             </div>
           </nav>
         </div>
