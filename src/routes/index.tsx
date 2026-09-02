@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SiShopify, SiWix, SiSquarespace, SiWhatsapp, SiInstagram, SiTiktok } from "react-icons/si";
-import { Mail, ArrowUpRight, Globe2 } from "lucide-react";
+import { SiShopify, SiWix, SiSquarespace } from "react-icons/si";
+import { ArrowUpRight, Globe2 } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { SocialIcons } from "@/components/site/SocialIcons";
 import { CONTACT, PROCESS, PROJECTS, REVIEWS, SERVICE_GROUPS } from "@/lib/site-data";
 import heroesLogo from "@/assets/heroes-agency-logo.png.asset.json";
 import portrait from "@/assets/kamyorg-portrait.png.asset.json";
