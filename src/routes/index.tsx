@@ -67,8 +67,6 @@ const PLATFORMS = [
   { Icon: SiShopify, label: "Shopify" },
   { Icon: SiWix, label: "Wix" },
   { Icon: SiSquarespace, label: "Squarespace" },
-  { Icon: SiInstagram, label: "Instagram" },
-  { Icon: SiTiktok, label: "TikTok" },
 ];
 
 const VALUE = [
