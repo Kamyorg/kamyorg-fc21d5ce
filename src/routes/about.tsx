@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiShopify, SiWix, SiSquarespace, SiWhatsapp } from "react-icons/si";
-import { Mail, Globe2 } from "lucide-react";
+import { Globe2 } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { SocialIcons } from "@/components/site/SocialIcons";
 import { CONTACT } from "@/lib/site-data";
 import portrait from "@/assets/kamyorg-portrait.png.asset.json";
 import heroesLogo from "@/assets/heroes-agency-logo.png.asset.json";
