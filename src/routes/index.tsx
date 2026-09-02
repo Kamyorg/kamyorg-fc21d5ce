@@ -174,11 +174,15 @@ function HomePage() {
           <div className="container-site py-10 md:py-12">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div className="flex flex-wrap items-center gap-x-7 gap-y-4">
+                <span className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Platforms I build on</span>
                 {PLATFORMS.map(({ Icon, label }) => (
-                  <span key={label} className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-                    <Icon className="h-[1.05rem] w-[1.05rem]" aria-hidden />
-                    {label}
-                  </span>
+                  <Icon
+                    key={label}
+                    role="img"
+                    aria-label={label}
+                    title={label}
+                    className="h-5 w-5 text-muted-foreground"
+                  />
                 ))}
               </div>
               <div className="flex items-center gap-3">
