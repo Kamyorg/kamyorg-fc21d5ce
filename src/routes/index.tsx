@@ -7,6 +7,7 @@ import { SocialIcons } from "@/components/site/SocialIcons";
 import { CONTACT, PROCESS, PROJECTS, REVIEWS, SERVICE_GROUPS } from "@/lib/site-data";
 import heroesLogo from "@/assets/heroes-agency-logo.png.asset.json";
 import portrait from "@/assets/kamyorg-portrait.png.asset.json";
+import { SmartImage } from "@/components/site/SmartImage";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -134,7 +135,7 @@ function HomePage() {
             <div className="lg:col-span-5">
               <div className="relative mx-auto max-w-sm lg:max-w-none">
                 <div className="surface overflow-hidden rounded-2xl">
-                  <img
+                  <SmartImage
                     src={portrait.url}
                     alt="Mohammed Kamaldeen, Shopify developer known as Kamyorg"
                     width={888}
@@ -186,12 +187,11 @@ function HomePage() {
                 ))}
               </div>
               <div className="flex items-center gap-3">
-                <img
+                <SmartImage
                   src={heroesLogo.url}
                   alt="TheHeroes Agency"
                   width={40}
                   height={40}
-                  loading="lazy"
                   className="h-10 w-10 rounded-full object-cover ring-1 ring-border"
                 />
                 <div className="text-sm">
@@ -251,10 +251,9 @@ function HomePage() {
             {selectedWork.map((p) => (
               <article key={p.slug} className="surface group overflow-hidden rounded-2xl">
                 <div className="relative">
-                  <img
+                  <SmartImage
                     src={p.img}
                     alt={`${p.t} Shopify store`}
-                    loading="lazy"
                     className="h-48 w-full object-cover sm:h-52"
                   />
                   <span className="overlay-card absolute left-4 top-4 inline-flex items-center gap-2 px-2.5 py-1.5 text-[0.7rem] text-muted-foreground">

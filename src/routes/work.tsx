@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageCTA } from "@/components/site/PageShell";
 import { PROJECTS } from "@/lib/site-data";
+import { SmartImage } from "@/components/site/SmartImage";
 
 export const Route = createFileRoute("/work")({
   head: () => ({
@@ -30,10 +31,9 @@ function WorkPage() {
     >
       {/* Featured project */}
       <article className="surface overflow-hidden rounded-2xl">
-        <img
+        <SmartImage
           src={featured.img}
           alt={`${featured.t} Shopify store design`}
-          loading="lazy"
           className="h-56 w-full object-cover sm:h-72 lg:h-80"
         />
         <div className="p-7 md:p-10">
@@ -81,10 +81,9 @@ function WorkPage() {
         <div className="mt-8 grid gap-5 md:grid-cols-2">
           {rest.map((p) => (
             <article key={p.slug} className="surface overflow-hidden rounded-2xl">
-              <img
+              <SmartImage
                 src={p.img}
                 alt={`${p.t} Shopify store design`}
-                loading="lazy"
                 className="h-48 w-full object-cover sm:h-56"
               />
               <div className="p-6 md:p-7">
