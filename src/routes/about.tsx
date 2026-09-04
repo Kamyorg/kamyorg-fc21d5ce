@@ -7,6 +7,7 @@ import { SocialIcons } from "@/components/site/SocialIcons";
 import { CONTACT } from "@/lib/site-data";
 import portrait from "@/assets/kamyorg-portrait.png.asset.json";
 import heroesLogo from "@/assets/heroes-agency-logo.png.asset.json";
+import { SmartImage } from "@/components/site/SmartImage";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -143,7 +144,7 @@ function AboutPage() {
 
             <div className="lg:col-span-5">
               <div className="relative mx-auto max-w-sm overflow-hidden rounded-2xl ring-1 ring-border lg:max-w-none">
-                <img
+                <SmartImage
                   src={portrait.url}
                   alt="Mohammed Kamaldeen, Shopify developer working under the name Kamyorg"
                   width={900}
@@ -280,12 +281,11 @@ function AboutPage() {
         {/* PARTNERSHIP ------------------------------------------- */}
         <section className="container-site pt-16 md:pt-24">
           <div className="surface flex flex-col gap-6 rounded-2xl p-7 md:flex-row md:items-center md:gap-10 md:p-10">
-            <img
+            <SmartImage
               src={heroesLogo.url}
               alt="TheHeroes Agency"
               width={72}
               height={72}
-              loading="lazy"
               className="h-16 w-16 shrink-0 rounded-full object-cover ring-1 ring-border"
             />
             <div className="max-w-2xl">
