@@ -99,21 +99,26 @@ function HomePage() {
       <Nav />
 
       <main className="page-enter flex-1 pt-16 md:pt-20">
-        {/* 1. Hero */}
-        <section className="container-site pt-12 pb-14 md:pt-20 md:pb-20">
-          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
-            <div className="lg:col-span-7">
-              <p className="eyebrow">Mohammed Kamaldeen — Kamyorg</p>
-              <h1 className="mt-4 max-w-2xl font-display text-[1.9rem] font-medium leading-[1.18] tracking-tight sm:text-[2.45rem] lg:text-[2.9rem]">
-                Shopify stores built around how customers actually browse, compare and buy.
-              </h1>
-              <p className="mt-5 max-w-xl text-[0.95rem] leading-relaxed text-muted-foreground md:text-base">
-                If your store looks unfinished, feels slow or gets traffic that never converts, that's usually a
-                structure problem rather than a design taste problem. I build and refine Shopify stores so the shop
-                looks credible, the buying journey makes sense, and the technical side stops getting in the way.
-              </p>
+        {/* 1. Hero — editorial split */}
+        <section className="container-site pt-14 pb-16 md:pt-24 md:pb-24">
+          <div className="flex flex-col items-center gap-16 lg:flex-row lg:gap-24">
+            <div className="flex-1 space-y-8">
+              <div className="space-y-5">
+                <span className="eyebrow block">Mohammed Kamaldeen — Kamyorg</span>
+                <h1 className="font-display text-[2.5rem] font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-[4rem]">
+                  Building{" "}
+                  <span className="bg-gradient-to-r from-brand to-foreground bg-clip-text text-transparent">
+                    Shopify stores
+                  </span>{" "}
+                  that people trust and buy from.
+                </h1>
+                <p className="max-w-lg text-lg leading-relaxed text-muted-foreground">
+                  I build and refine Shopify stores so the shop looks credible, the buying journey makes sense, and the
+                  technical side stops getting in the way.
+                </p>
+              </div>
 
-              <div className="mt-8 flex flex-wrap items-center gap-3">
+              <div className="flex flex-wrap items-center gap-4">
                 <Link to="/contact" className="btn-primary">
                   Let's Work Together
                 </Link>
@@ -122,9 +127,10 @@ function HomePage() {
                 </Link>
               </div>
 
-              <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
+              <div className="flex flex-wrap items-center gap-5 pt-2">
                 <SocialIcons size="sm" />
-                <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="hidden h-4 w-px bg-border-strong sm:block" />
+                <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
                   <Globe2 className="h-4 w-4 text-brand" aria-hidden />
                   {CONTACT.availability}
                 </span>
@@ -132,72 +138,66 @@ function HomePage() {
             </div>
 
             {/* Portrait with two purposeful overlays */}
-            <div className="lg:col-span-5">
-              <div className="relative mx-auto max-w-sm lg:max-w-none">
-                <div className="surface overflow-hidden rounded-2xl">
-                  <SmartImage
-                    src={portrait.url}
-                    alt="Mohammed Kamaldeen, Shopify developer known as Kamyorg"
-                    width={888}
-                    height={1184}
-                    className="aspect-[3/4] w-full object-cover object-top"
-                  />
-                </div>
+            <div className="relative w-full max-w-sm flex-1 lg:max-w-none">
+              <div className="relative z-10 overflow-hidden rounded-2xl border-2 border-surface shadow-elevated">
+                <SmartImage
+                  src={portrait.url}
+                  alt="Mohammed Kamaldeen, Shopify developer known as Kamyorg"
+                  width={888}
+                  height={1184}
+                  className="aspect-[4/5] w-full object-cover object-top grayscale-[0.2] transition-all duration-700 hover:grayscale-0"
+                />
+              </div>
 
-                {/* credibility overlay — bottom, clear of the face */}
-                <div className="overlay-card absolute -bottom-5 left-4 right-4 px-4 py-3">
-                  <div className="grid grid-cols-3 gap-2 text-center">
-                    {[
-                      { k: "2+ yrs", v: "Experience" },
-                      { k: "20+", v: "Stores built" },
-                      { k: "Remote", v: "Worldwide" },
-                    ].map((s) => (
-                      <div key={s.v}>
-                        <div className="font-display text-sm font-semibold">{s.k}</div>
-                        <div className="text-[0.68rem] uppercase tracking-[0.14em] text-muted-foreground">{s.v}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* platform label overlay — top corner */}
-                <div className="overlay-card absolute -left-3 top-6 hidden items-center gap-2 px-3 py-2 sm:flex">
-                  <SiShopify className="h-4 w-4 text-brand" aria-hidden />
-                  <span className="text-xs text-muted-foreground">Shopify specialist</span>
+              <div className="absolute -bottom-6 -left-4 z-20 rounded-xl border border-border-strong bg-surface p-5 shadow-elevated sm:-left-6 sm:p-6">
+                <div className="flex items-center gap-3">
+                  <span className="font-display text-2xl font-bold text-brand">2+</span>
+                  <span className="text-[0.68rem] uppercase leading-tight tracking-wide text-muted-foreground">
+                    Years
+                    <br />
+                    experience
+                  </span>
                 </div>
               </div>
+
+              <div className="absolute -right-4 top-10 z-20 rounded-xl bg-brand p-5 text-center shadow-elevated sm:-right-6 sm:p-6">
+                <div className="font-display text-2xl font-bold text-background">20+</div>
+                <div className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-background">Stores</div>
+              </div>
+
+              <div className="glow-brand" aria-hidden />
             </div>
           </div>
         </section>
 
         {/* 2. Trust / platforms */}
-        <section className="hairline bg-background-alt">
-          <div className="container-site py-10 md:py-12">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-              <div className="flex flex-wrap items-center gap-x-7 gap-y-4">
-                <span className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Platforms I build on</span>
-                {PLATFORMS.map(({ Icon, label }) => (
-                  <Icon
-                    key={label}
-                    role="img"
-                    aria-label={label}
-                    title={label}
-                    className="h-5 w-5 text-muted-foreground"
-                  />
-                ))}
-              </div>
-              <div className="flex items-center gap-3">
-                <SmartImage
-                  src={heroesLogo.url}
-                  alt="TheHeroes Agency"
-                  width={40}
-                  height={40}
-                  className="h-10 w-10 rounded-full object-cover ring-1 ring-border"
+        <section className="container-site">
+          <div className="flex flex-col gap-8 border-y border-border py-10 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
+              <span className="text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
+                Platforms I build on
+              </span>
+              {PLATFORMS.map(({ Icon, label }) => (
+                <Icon
+                  key={label}
+                  role="img"
+                  aria-label={label}
+                  title={label}
+                  className="h-6 w-6 text-muted-foreground transition-colors hover:text-brand"
                 />
-                <div className="text-sm">
-                  <div className="font-medium">Strategic partner — TheHeroes Agency</div>
-                  <div className="text-muted-foreground">Extra capacity on larger client projects</div>
-                </div>
+              ))}
+            </div>
+            <div className="flex items-center gap-3">
+              <SmartImage
+                src={heroesLogo.url}
+                alt="TheHeroes Agency"
+                width={40}
+                height={40}
+                className="h-10 w-10 rounded-full object-cover ring-1 ring-border"
+              />
+              <div className="text-sm">
+                <div className="font-medium">Strategic partner — TheHeroes Agency</div>
+                <div className="text-muted-foreground">Extra capacity on larger client projects</div>
               </div>
             </div>
           </div>
@@ -210,12 +210,17 @@ function HomePage() {
             title="The things that usually stand between a store and its sales"
             sub="Most projects I take on start with one of these four problems."
           />
-          <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {VALUE.map((v, i) => (
-              <div key={v.t} className="bg-background p-7 md:p-8">
-                <div className="text-xs tracking-[0.2em] text-brand">{String(i + 1).padStart(2, "0")}</div>
-                <h3 className="mt-4 font-display text-lg font-medium">{v.t}</h3>
-                <p className="mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">{v.d}</p>
+              <div
+                key={v.t}
+                className="group rounded-2xl border border-border bg-surface p-8 transition-colors hover:border-brand/40"
+              >
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-brand/10 font-display text-sm font-bold text-brand transition-colors group-hover:bg-brand group-hover:text-background">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <h3 className="font-display text-lg font-bold leading-snug">{v.t}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{v.d}</p>
               </div>
             ))}
           </div>
@@ -230,11 +235,14 @@ function HomePage() {
             to="/services"
             linkLabel="All services"
           />
-          <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {selectedServices.map((s) => (
-              <div key={s.t} className="bg-background p-7">
-                <h3 className="font-display text-base font-medium">{s.t}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.d}</p>
+              <div
+                key={s.t}
+                className="rounded-2xl border border-border bg-surface p-8 transition-colors hover:border-brand/40"
+              >
+                <h3 className="font-display text-lg font-bold">{s.t}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.d}</p>
               </div>
             ))}
           </div>
