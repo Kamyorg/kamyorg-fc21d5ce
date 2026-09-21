@@ -49,8 +49,8 @@ function SectionHead({
     <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
       <div className="max-w-xl">
         <p className="eyebrow">{eyebrow}</p>
-        <h2 className="mt-3 font-display text-2xl font-semibold leading-snug sm:text-[2rem]">{title}</h2>
-        {sub && <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-[0.95rem]">{sub}</p>}
+        <h2 className="mt-4 font-display text-3xl font-bold leading-[1.15] sm:text-[2.5rem]">{title}</h2>
+        {sub && <p className="mt-4 text-[0.95rem] leading-relaxed text-muted-foreground">{sub}</p>}
       </div>
       {to && linkLabel && (
         <Link
@@ -255,23 +255,26 @@ function HomePage() {
             title="Recent Shopify projects"
             sub="A short selection — the full breakdown of each project lives on the work page."
           />
-          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
             {selectedWork.map((p) => (
-              <article key={p.slug} className="surface group overflow-hidden rounded-2xl">
-                <div className="relative">
+              <article
+                key={p.slug}
+                className="group overflow-hidden rounded-2xl border border-border bg-surface transition-colors hover:border-brand/40"
+              >
+                <div className="relative overflow-hidden">
                   <SmartImage
                     src={p.img}
                     alt={`${p.t} Shopify store`}
-                    className="h-48 w-full object-cover sm:h-52"
+                    className="h-52 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04] sm:h-60"
                   />
                   <span className="overlay-card absolute left-4 top-4 inline-flex items-center gap-2 px-2.5 py-1.5 text-[0.7rem] text-muted-foreground">
                     <SiShopify className="h-3.5 w-3.5 text-brand" aria-hidden />
                     Shopify
                   </span>
                 </div>
-                <div className="p-6 md:p-7">
+                <div className="p-7 md:p-8">
                   <div className="text-xs uppercase tracking-[0.16em] text-muted-foreground">{p.c}</div>
-                  <h3 className="mt-2 font-display text-lg font-medium">{p.t}</h3>
+                  <h3 className="mt-2 font-display text-xl font-bold">{p.t}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
                   <ul className="mt-4 flex flex-wrap gap-2">
                     {p.tags.map((t) => (
