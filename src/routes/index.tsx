@@ -305,7 +305,7 @@ function HomePage() {
           <div className="grid gap-10 lg:grid-cols-12">
             <div className="lg:col-span-7">
               <p className="eyebrow">About</p>
-              <h2 className="mt-3 font-display text-2xl font-semibold leading-snug sm:text-[2rem]">
+              <h2 className="mt-4 font-display text-3xl font-bold leading-[1.15] sm:text-[2.5rem]">
                 The person you'll actually be working with
               </h2>
               <p className="mt-5 max-w-xl text-[0.95rem] leading-relaxed text-muted-foreground">
@@ -325,7 +325,7 @@ function HomePage() {
               </Link>
             </div>
             <div className="lg:col-span-5">
-              <div className="surface rounded-2xl p-7">
+              <div className="rounded-2xl border border-border bg-surface p-8">
                 <p className="eyebrow">Good to know</p>
                 <ul className="mt-5 space-y-4 text-sm">
                   <li>
@@ -360,12 +360,16 @@ function HomePage() {
             to="/testimonials"
             linkLabel="All feedback"
           />
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
             {preview.map((r) => (
-              <figure key={r.n} className="surface flex h-full flex-col rounded-2xl p-7">
-                <blockquote className="text-sm leading-relaxed text-muted-foreground">{r.q}</blockquote>
-                <figcaption className="mt-6 text-sm">
-                  <span className="font-medium">{r.n}</span>
+              <figure
+                key={r.n}
+                className="flex h-full flex-col rounded-2xl border border-border bg-surface p-8 transition-colors hover:border-brand/40"
+              >
+                <div className="mb-5 font-display text-4xl leading-none text-brand">&ldquo;</div>
+                <blockquote className="text-[0.95rem] leading-relaxed text-muted-foreground">{r.q}</blockquote>
+                <figcaption className="mt-6 border-t border-border pt-5 text-sm">
+                  <span className="font-semibold">{r.n}</span>
                   <span className="block text-xs text-muted-foreground">{r.r}</span>
                 </figcaption>
               </figure>
@@ -380,11 +384,13 @@ function HomePage() {
             title="What happens after you get in touch"
             sub="No long onboarding — usually a short conversation, then a clear plan."
           />
-          <ol className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
+          <ol className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {PROCESS.map((p) => (
-              <li key={p.n} className="bg-background p-7">
-                <div className="text-xs tracking-[0.2em] text-brand">{p.n}</div>
-                <div className="mt-3 font-display font-medium">{p.t}</div>
+              <li key={p.n} className="rounded-2xl border border-border bg-surface p-7">
+                <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-lg bg-brand/10 font-display text-xs font-bold text-brand">
+                  {p.n}
+                </div>
+                <div className="font-display text-base font-bold">{p.t}</div>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.d}</p>
               </li>
             ))}
@@ -397,7 +403,7 @@ function HomePage() {
             <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-xl">
                 <p className="eyebrow">Contact</p>
-                <h2 className="mt-3 font-display text-2xl font-semibold leading-snug sm:text-[2rem]">
+                <h2 className="mt-4 font-display text-3xl font-bold leading-[1.15] sm:text-[2.5rem]">
                   Tell me what your store needs
                 </h2>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
