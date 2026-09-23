@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { NAV_LINKS, CONTACT } from "@/lib/site-data";
 import { SocialIcons } from "@/components/site/SocialIcons";
-import kamyorgMark from "@/assets/kamyorg-mark.png.asset.json";
+import kamyorgMark from "@/assets/kamyorg-mark.png";
 import { SmartImage } from "@/components/site/SmartImage";
 
 export function Nav() {
@@ -32,7 +32,7 @@ export function Nav() {
       <div className="container-site flex h-16 items-center justify-between md:h-20">
         <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-2.5">
           <SmartImage
-            src={kamyorgMark.url}
+            src={kamyorgMark}
             alt="Kamyorg"
             width={36}
             height={36}
