@@ -129,7 +129,7 @@ function HomePage() {
 
               <div className="flex flex-wrap items-center gap-5 pt-2">
                 <SocialIcons size="sm" />
-                <div className="hidden h-4 w-px bg-border-strong sm:block" />
+                <div className="hidden h-4 w-px bg-border-strong lg:block" />
                 <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
                   <Globe2 className="h-4 w-4 text-brand" aria-hidden />
                   {CONTACT.availability}
