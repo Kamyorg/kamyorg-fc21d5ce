@@ -5,8 +5,8 @@ import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { SocialIcons } from "@/components/site/SocialIcons";
 import { CONTACT } from "@/lib/site-data";
-import portrait from "@/assets/kamyorg-portrait.png.asset.json";
-import heroesLogo from "@/assets/heroes-agency-logo.png.asset.json";
+import portrait from "@/assets/kamyorg-portrait.png";
+import heroesLogo from "@/assets/heroes-agency-logo.png";
 import { SmartImage } from "@/components/site/SmartImage";
 
 export const Route = createFileRoute("/about")({
@@ -145,7 +145,7 @@ function AboutPage() {
             <div className="lg:col-span-5">
               <div className="relative mx-auto max-w-sm overflow-hidden rounded-2xl ring-1 ring-border lg:max-w-none">
                 <SmartImage
-                  src={portrait.url}
+                  src={portrait}
                   alt="Mohammed Kamaldeen, Shopify developer working under the name Kamyorg"
                   width={900}
                   height={1100}
@@ -282,7 +282,7 @@ function AboutPage() {
         <section className="container-site pt-16 md:pt-24">
           <div className="surface flex flex-col gap-6 rounded-2xl p-7 md:flex-row md:items-center md:gap-10 md:p-10">
             <SmartImage
-              src={heroesLogo.url}
+              src={heroesLogo}
               alt="TheHeroes Agency"
               width={72}
               height={72}

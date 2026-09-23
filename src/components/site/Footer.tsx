@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { CONTACT } from "@/lib/site-data";
 import { SocialIcons } from "@/components/site/SocialIcons";
-import kamyorgMark from "@/assets/kamyorg-mark.png.asset.json";
+import kamyorgMark from "@/assets/kamyorg-mark.png";
 import { SmartImage } from "@/components/site/SmartImage";
 
 const EXPLORE = [
@@ -19,7 +19,7 @@ export function Footer() {
           <div className="lg:col-span-5">
             <div className="flex items-center gap-2.5">
               <SmartImage
-                src={kamyorgMark.url}
+                src={kamyorgMark}
                 alt="Kamyorg"
                 width={36}
                 height={36}
