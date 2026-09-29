@@ -1,7 +1,7 @@
-import projRebel from "@/assets/project-rebelshape.jpg";
-import projTrade from "@/assets/project-trade.jpg";
-import projBon from "@/assets/project-bonceero.jpg";
-import projSlim from "@/assets/project-slimora.jpg";
+import projRebel from "@/assets/project-rebelshape-home.jpg";
+import projTrade from "@/assets/project-trade-home.jpg";
+import projBon from "@/assets/project-bonceero-home.jpg";
+import projSlim from "@/assets/project-slimora-home.jpg";
 
 export const CONTACT = {
   email: "info@kamyorg.com",
@@ -75,6 +75,7 @@ export const PROJECTS = [
     t: "RebelShape.fr",
     c: "Activewear · France",
     img: projRebel,
+    url: "https://www.rebelshape.fr/",
     tags: ["Shrine Pro", "Redesign", "Technical Fixes"],
     desc:
       "Full redesign of the store on the Shrine Pro theme. Cleaned up the structure, fixed existing technical errors and rebuilt the product and collection pages to feel more like a real brand.",
@@ -85,6 +86,7 @@ export const PROJECTS = [
     t: "Trade-collector.com",
     c: "Collectibles · International",
     img: projTrade,
+    url: "https://trade-collector.com/",
     tags: ["Store Optimization", "UX"],
     desc:
       "Ongoing improvements to an existing store — adjusting the layout, fixing usability issues and making the buying flow easier to follow.",
@@ -95,6 +97,7 @@ export const PROJECTS = [
     t: "Bon-Ceero",
     c: "Beauty & Cosmetics",
     img: projBon,
+    url: "https://bonceero.com/",
     tags: ["Shopify Build", "Theme Customization"],
     desc:
       "Built the store from scratch on Shopify with a customized theme set up around the brand's look, product range and audience.",
@@ -105,6 +108,7 @@ export const PROJECTS = [
     t: "Slimora-Sculpt",
     c: "Wellness · DTC",
     img: projSlim,
+    url: "https://slimora.store/",
     tags: ["Setup", "Checkout"],
     desc:
       "Shopify setup with a focus on a clean product page, a simple checkout and a basic email flow for new customers.",
