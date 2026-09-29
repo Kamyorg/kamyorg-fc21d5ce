@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Project showcases use bundled screenshots of the verified live homepages and link directly to each external storefront, so visuals remain stable on every host.

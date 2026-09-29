@@ -261,17 +261,23 @@ function HomePage() {
                 key={p.slug}
                 className="group overflow-hidden rounded-2xl border border-border bg-surface transition-colors hover:border-brand/40"
               >
-                <div className="relative overflow-hidden">
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Visit ${p.t} live store`}
+                  className="relative block overflow-hidden bg-secondary"
+                >
                   <SmartImage
                     src={p.img}
-                    alt={`${p.t} Shopify store`}
-                    className="h-52 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04] sm:h-60"
+                    alt={`${p.t} live homepage`}
+                    className="aspect-[16/10] w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.025]"
                   />
                   <span className="overlay-card absolute left-4 top-4 inline-flex items-center gap-2 px-2.5 py-1.5 text-[0.7rem] text-muted-foreground">
                     <SiShopify className="h-3.5 w-3.5 text-brand" aria-hidden />
-                    Shopify
+                    Live store
                   </span>
-                </div>
+                </a>
                 <div className="p-7 md:p-8">
                   <div className="text-xs uppercase tracking-[0.16em] text-muted-foreground">{p.c}</div>
                   <h3 className="mt-2 font-display text-xl font-bold">{p.t}</h3>
@@ -283,12 +289,14 @@ function HomePage() {
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    to="/work"
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noreferrer"
                     className="mt-5 inline-flex items-center gap-1.5 text-sm text-brand transition-colors hover:text-brand-soft"
                   >
-                    View project <ArrowUpRight className="h-4 w-4" aria-hidden />
-                  </Link>
+                    Visit live store <ArrowUpRight className="h-4 w-4" aria-hidden />
+                  </a>
                 </div>
               </article>
             ))}
