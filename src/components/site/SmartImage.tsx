@@ -54,8 +54,7 @@ export function SmartImage({ src, alt, retries = 3, className = "", ...rest }: P
       alt={alt}
       loading="eager"
       decoding="async"
-      // @ts-expect-error fetchpriority is a valid HTML attribute
-      fetchpriority="high"
+      fetchPriority="high"
       onError={onError}
       className={className}
     />
