@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
+import { ShopifyRecommender } from "@/components/site/ShopifyRecommender";
 import { SERVICE_GROUPS, PROCESS } from "@/lib/site-data";
 
 export const Route = createFileRoute("/services")({
@@ -21,6 +22,8 @@ function ServicesPage() {
       title="What I can do for your store"
       intro="Everything below is work I do myself. If your project needs something that isn't listed, ask me and I'll tell you honestly whether I'm the right fit."
     >
+      <ShopifyRecommender />
+
       <div className="space-y-14">
         {SERVICE_GROUPS.map((g) => (
           <section key={g.group}>
