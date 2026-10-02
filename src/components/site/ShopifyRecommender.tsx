@@ -58,8 +58,8 @@ export function ShopifyRecommender() {
   };
 
   return (
-    <section aria-labelledby="service-match-title" className="border-y border-border bg-background-alt">
-      <div className="container-site section">
+    <section aria-labelledby="service-match-title" className="mb-20">
+      <div>
         <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:gap-16">
           <div className="max-w-md">
             <p className="eyebrow">Service match</p>
