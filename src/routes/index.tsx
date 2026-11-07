@@ -16,13 +16,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Mohammed Kamaldeen (Kamyorg) is a Shopify developer and store growth specialist. Store builds, redesigns, technical fixes, SEO and conversion work. Remote / Worldwide.",
+          "Akanbi Mohammed Kamaldeen (Kamyorg) is a Shopify developer and store growth specialist. Store builds, redesigns, technical fixes, SEO and conversion work. Remote / Worldwide.",
       },
       { property: "og:title", content: "Kamyorg — Shopify Development & Growth" },
       {
         property: "og:description",
         content:
-          "Shopify stores built and refined around how customers actually browse, compare and buy. Mohammed Kamaldeen, remote / worldwide.",
+          "Shopify stores built and refined around how customers actually browse, compare and buy. Akanbi Mohammed Kamaldeen, remote / worldwide.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -104,7 +104,7 @@ function HomePage() {
           <div className="flex flex-col items-center gap-16 lg:flex-row lg:gap-24">
             <div className="flex-1 space-y-8">
               <div className="space-y-5">
-                <span className="eyebrow block">Mohammed Kamaldeen — Kamyorg</span>
+                <span className="eyebrow block">Akanbi Mohammed Kamaldeen — Kamyorg</span>
                 <h1 className="font-display text-[2.5rem] font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-[4rem]">
                   Building{" "}
                   <span className="bg-gradient-to-r from-brand to-foreground bg-clip-text text-transparent">
@@ -142,7 +142,7 @@ function HomePage() {
               <div className="relative z-10 overflow-hidden rounded-2xl border-2 border-surface shadow-elevated">
                 <SmartImage
                   src={portrait}
-                  alt="Mohammed Kamaldeen, Shopify developer known as Kamyorg"
+                  alt="Akanbi Mohammed Kamaldeen, Shopify developer known as Kamyorg"
                   width={888}
                   height={1184}
                   className="aspect-[4/5] w-full object-cover object-top grayscale-[0.2] transition-all duration-700 hover:grayscale-0"
@@ -317,7 +317,7 @@ function HomePage() {
                 The person you'll actually be working with
               </h2>
               <p className="mt-5 max-w-xl text-[0.95rem] leading-relaxed text-muted-foreground">
-                I'm Mohammed Kamaldeen. I've spent the last couple of years building, rebuilding and looking after
+                I'm Akanbi Mohammed Kamaldeen. I've spent the last couple of years building, rebuilding and looking after
                 Shopify stores for small brands and growing shops. You deal with me directly — the same person who
                 writes the plan, builds the store and answers your messages after launch.
               </p>
