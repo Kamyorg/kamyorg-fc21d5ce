@@ -8,11 +8,12 @@ import {
   SiYoutube,
   SiWhatsapp,
 } from "react-icons/si";
-import { Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import type { ComponentType } from "react";
 import { SOCIALS } from "@/lib/site-data";
 
 const ICONS: Record<string, ComponentType<{ className?: string }>> = {
+  linkedin: Linkedin,
   instagram: SiInstagram,
   threads: SiThreads,
   x: SiX,
