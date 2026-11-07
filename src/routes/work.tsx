@@ -5,6 +5,7 @@ import { PROJECTS } from "@/lib/site-data";
 import { SmartImage } from "@/components/site/SmartImage";
 
 export const Route = createFileRoute("/work")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Work — Shopify Stores by Kamyorg" },
@@ -15,7 +16,11 @@ export const Route = createFileRoute("/work")({
       },
       { property: "og:title", content: "Work — Shopify Stores by Kamyorg" },
       { property: "og:description", content: "Shopify builds, redesigns and store improvements, project by project." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://kamyorg.lovable.app/work" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://kamyorg.lovable.app/work" }],
   }),
   component: WorkPage,
 });

@@ -5,13 +5,18 @@ import { SocialIcons } from "@/components/site/SocialIcons";
 import { CONTACT } from "@/lib/site-data";
 
 export const Route = createFileRoute("/contact")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Contact Kamyorg — Shopify Developer" },
       { name: "description", content: "Tell me about your Shopify project. Email info@kamyorg.com or message me on WhatsApp and I'll reply with a plan, timeline and price." },
       { property: "og:title", content: "Contact Kamyorg — Shopify Developer" },
       { property: "og:description", content: "Tell me about your Shopify project and I'll reply with a plan, timeline and price." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://kamyorg.lovable.app/contact" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://kamyorg.lovable.app/contact" }],
   }),
   component: ContactPage,
 });

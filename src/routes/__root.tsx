@@ -74,12 +74,14 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  staticData: { sitemap: false },
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Kamyorg — Shopify Development & Growth" },
-      { name: "author", content: "Kamyorg" },
+      { name: "author", content: "Akanbi Mohammed Kamaldeen" },
+      { name: "google-site-verification", content: "Y6CCZQZZNTJIeuvhDYXfJiBHI9UPjACoJ44yCStwIX4" },
       { property: "og:site_name", content: "Kamyorg" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

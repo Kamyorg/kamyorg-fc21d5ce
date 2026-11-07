@@ -4,21 +4,23 @@ import { ArrowUpRight, Globe2 } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { SocialIcons } from "@/components/site/SocialIcons";
-import { CONTACT, PROCESS, PROJECTS, REVIEWS, SERVICE_GROUPS } from "@/lib/site-data";
+import { CONTACT, PROCESS, PROJECTS, REVIEWS, SERVICE_GROUPS, SOCIALS } from "@/lib/site-data";
 import heroesLogo from "@/assets/heroes-agency-logo.png";
 import portrait from "@/assets/kamyorg-portrait.png";
 import { SmartImage } from "@/components/site/SmartImage";
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Kamyorg — Shopify Development & Growth" },
+      { title: "Akanbi Mohammed Kamaldeen | Kamyorg — Shopify Developer" },
       {
         name: "description",
         content:
           "Akanbi Mohammed Kamaldeen (Kamyorg) is a Shopify developer and store growth specialist. Store builds, redesigns, technical fixes, SEO and conversion work. Remote / Worldwide.",
       },
-      { property: "og:title", content: "Kamyorg — Shopify Development & Growth" },
+      { property: "og:title", content: "Akanbi Mohammed Kamaldeen | Kamyorg — Shopify Developer" },
+      { property: "og:url", content: "https://kamyorg.lovable.app/" },
       {
         property: "og:description",
         content:
@@ -28,6 +30,27 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://kamyorg.lovable.app/" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person", "@id": "https://kamyorg.lovable.app/#person",
+            name: "Akanbi Mohammed Kamaldeen", alternateName: "Kamyorg",
+            jobTitle: "Shopify Developer, Designer & Store Growth Specialist",
+            url: "https://kamyorg.lovable.app/", email: CONTACT.email,
+            sameAs: SOCIALS.filter((profile) => !["email", "whatsapp"].includes(profile.id)).map((profile) => profile.href),
+            knowsAbout: ["Shopify development", "Shopify store design", "Technical SEO", "Conversion rate optimization"],
+          },
+          {
+            "@type": "WebSite", "@id": "https://kamyorg.lovable.app/#website",
+            name: "Kamyorg", url: "https://kamyorg.lovable.app/",
+            publisher: { "@id": "https://kamyorg.lovable.app/#person" },
+          },
+        ],
+      }),
+    }],
   }),
   component: HomePage,
 });
