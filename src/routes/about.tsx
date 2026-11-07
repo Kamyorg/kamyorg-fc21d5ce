@@ -12,13 +12,13 @@ import { SmartImage } from "@/components/site/SmartImage";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Mohammed Kamaldeen — Kamyorg" },
+      { title: "About Akanbi Mohammed Kamaldeen — Kamyorg" },
       {
         name: "description",
         content:
-          "Mohammed Kamaldeen is the Shopify developer and store growth specialist behind Kamyorg — store builds, redesigns, technical fixes, SEO and conversion work. Remote / Worldwide.",
+          "Akanbi Mohammed Kamaldeen is the Shopify developer and store growth specialist behind Kamyorg — store builds, redesigns, technical fixes, SEO and conversion work. Remote / Worldwide.",
       },
-      { property: "og:title", content: "About Mohammed Kamaldeen — Kamyorg" },
+      { property: "og:title", content: "About Akanbi Mohammed Kamaldeen — Kamyorg" },
       {
         property: "og:description",
         content:
@@ -117,7 +117,7 @@ function AboutPage() {
             <div className="lg:col-span-7">
               <p className="eyebrow">About</p>
               <h1 className="mt-4 max-w-2xl font-display text-[1.9rem] font-semibold leading-[1.15] sm:text-4xl lg:text-[2.75rem]">
-                I'm Mohammed Kamaldeen. Kamyorg is the name I work under.
+                I'm Akanbi Mohammed Kamaldeen. Kamyorg is the name I work under.
               </h1>
               <div className="mt-6 max-w-xl space-y-4 text-base leading-relaxed text-muted-foreground">
                 <p>
@@ -146,7 +146,7 @@ function AboutPage() {
               <div className="relative mx-auto max-w-sm overflow-hidden rounded-2xl ring-1 ring-border lg:max-w-none">
                 <SmartImage
                   src={portrait}
-                  alt="Mohammed Kamaldeen, Shopify developer working under the name Kamyorg"
+                  alt="Akanbi Mohammed Kamaldeen, Shopify developer working under the name Kamyorg"
                   width={900}
                   height={1100}
                   className="aspect-[4/5] w-full object-cover object-top"

@@ -28,7 +28,7 @@ export function Footer() {
               <span className="font-display text-base font-semibold tracking-tight">Kamyorg</span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Shopify development, design and store growth by Mohammed Kamaldeen — working remotely with brands worldwide.
+              Shopify development, design and store growth by Akanbi Mohammed Kamaldeen — working remotely with brands worldwide.
             </p>
           </div>
 
