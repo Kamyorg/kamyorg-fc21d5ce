@@ -13,7 +13,7 @@ import type { ComponentType } from "react";
 import { SOCIALS } from "@/lib/site-data";
 
 const ICONS: Record<string, ComponentType<{ className?: string }>> = {
-  linkedin: SiLinkedin,
+  linkedin: Linkedin,
   instagram: SiInstagram,
   threads: SiThreads,
   x: SiX,
