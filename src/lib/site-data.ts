@@ -11,6 +11,7 @@ export const CONTACT = {
 };
 
 export const SOCIALS = [
+  { id: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/mohammed-akanbi" },
   { id: "instagram", label: "Instagram", href: "https://www.instagram.com/kamyorgexpert?igsi=MXU3NTlqbHh0dXQycw==" },
   { id: "threads", label: "Threads", href: "https://www.threads.com/@kamyorgexpert" },
   { id: "x", label: "X", href: "https://x.com/kamyorgexpert" },

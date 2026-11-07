@@ -1,4 +1,5 @@
 import {
+  SiLinkedin,
   SiInstagram,
   SiThreads,
   SiX,
