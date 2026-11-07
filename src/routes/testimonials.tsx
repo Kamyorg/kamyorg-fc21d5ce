@@ -3,13 +3,18 @@ import { PageShell } from "@/components/site/PageShell";
 import { REVIEWS, FAQS } from "@/lib/site-data";
 
 export const Route = createFileRoute("/testimonials")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Client Feedback — Kamyorg" },
       { name: "description", content: "What store owners in the UK, US, France, Spain, Brazil and Colombia say about working with Akanbi Mohammed Kamaldeen on their Shopify stores." },
       { property: "og:title", content: "Client Feedback — Kamyorg" },
       { property: "og:description", content: "What store owners say about working with Akanbi Mohammed Kamaldeen on their Shopify stores." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://kamyorg.lovable.app/testimonials" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://kamyorg.lovable.app/testimonials" }],
   }),
   component: TestimonialsPage,
 });

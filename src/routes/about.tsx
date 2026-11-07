@@ -10,6 +10,7 @@ import heroesLogo from "@/assets/heroes-agency-logo.png";
 import { SmartImage } from "@/components/site/SmartImage";
 
 export const Route = createFileRoute("/about")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "About Akanbi Mohammed Kamaldeen — Kamyorg" },
@@ -25,8 +26,10 @@ export const Route = createFileRoute("/about")({
           "How I work on Shopify stores: structure, customer journey, technical fixes and growth. 2+ years, 20+ stores, remote / worldwide.",
       },
       { property: "og:type", content: "profile" },
+      { property: "og:url", content: "https://kamyorg.lovable.app/about" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://kamyorg.lovable.app/about" }],
   }),
   component: AboutPage,
 });

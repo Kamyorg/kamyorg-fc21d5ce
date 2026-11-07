@@ -10,4 +10,5 @@
 <!-- LOVABLE:END -->
 
 - Project showcases use bundled screenshots of the verified live homepages and link directly to each external storefront, so visuals remain stable on every host.
+- Sitemap URLs derive from explicit route inclusion decisions; keep page-specific canonicals and identity structured data on content routes so Google receives consistent public identity information.
 - Shopify recommendations run through a public one-shot server function and must map model output back to the local service and verified-project allowlists before rendering, so no invented offerings or work reach prospects.
