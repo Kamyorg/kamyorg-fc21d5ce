@@ -1,14 +1,15 @@
-import { describe, expect, test } from "bun:test";
+import { describe, test } from "node:test";
+import assert from "node:assert/strict";
 import { sitemapXML } from "./sitemap";
 
 describe("public sitemap", () => {
   test("uses the published Kamyorg origin and omits invented modification dates", () => {
     const xml = sitemapXML("https://kamyorg.lovable.app", [{ path: "/" }, { path: "/about" }]);
-    expect(xml).toContain("<loc>https://kamyorg.lovable.app/</loc>");
-    expect(xml).toContain("<loc>https://kamyorg.lovable.app/about</loc>");
-    expect(xml).not.toContain("<lastmod>");
+    assert.ok(xml.includes("<loc>https://kamyorg.lovable.app/</loc>"));
+    assert.ok(xml.includes("<loc>https://kamyorg.lovable.app/about</loc>"));
+    assert.ok(!xml.includes("<lastmod>"));
   });
   test("rejects external destinations", () => {
-    expect(() => sitemapXML("https://kamyorg.lovable.app", [{ path: "//other.example/" }])).toThrow();
+    assert.throws(() => sitemapXML("https://kamyorg.lovable.app", [{ path: "//other.example/" }]));
   });
 });
