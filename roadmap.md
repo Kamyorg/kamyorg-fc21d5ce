@@ -1,5 +1,4 @@
 # Search identity update
-- [ ] Add accurate person information and page search metadata.
-- [ ] Add Google verification and discoverable sitemap.
-- [ ] Verify preview, publish, and complete Google ownership and sitemap submission.
-- [ ] Clarify what "delete project online" means and handle safely.
+- [x] Add accurate person information, page search metadata, Google verification, and a discoverable sitemap to the preview.
+- [ ] Publish and finish Google ownership verification and sitemap submission — paused because the user requested deletion before publication.
+- [ ] Delete the whole project — requires the project owner to confirm deletion in project settings; the agent cannot delete projects.
