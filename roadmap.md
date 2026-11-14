@@ -2,3 +2,4 @@
 - [ ] Add accurate person information and page search metadata.
 - [ ] Add Google verification and discoverable sitemap.
 - [ ] Verify preview, publish, and complete Google ownership and sitemap submission.
+- [ ] Clarify what "delete project online" means and handle safely.
